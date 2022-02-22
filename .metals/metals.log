@@ -49,3 +49,7 @@ INFO: compiler crashed due to an error in the Scala compiler, retrying with new 
 2022.02.22 15:45:50 INFO  time: compiled project-3 in 0.82s
 2022.02.22 15:46:33 INFO  compiling project-3 (1 scala source)
 2022.02.22 15:46:38 INFO  time: compiled project-3 in 4.89s
+2022.02.22 16:01:41 INFO  compiling project-3 (1 scala source)
+2022.02.22 16:01:41 INFO  time: compiled project-3 in 0.25s
+2022.02.22 16:01:59 INFO  compiling project-3 (1 scala source)
+2022.02.22 16:01:59 INFO  time: compiled project-3 in 0.79s
