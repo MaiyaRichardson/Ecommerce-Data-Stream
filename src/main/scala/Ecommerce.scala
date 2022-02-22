@@ -28,8 +28,12 @@ object EcommerceProj {
         spark.close()
 
         def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
+        var name = "dsd"
+        var Id = "sdsd"
+        var website
         val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
+
     }
 
 
