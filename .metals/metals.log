@@ -1,0 +1,51 @@
+2022.02.22 15:27:53 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\user\Desktop\Project-3\.metals\lsp.trace.json or C:\Users\user\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.22 15:27:54 INFO  logging to file C:\Users\user\Desktop\Project-3\.metals\metals.log
+2022.02.22 15:27:54 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\user\Desktop\Project-3' for client Visual Studio Code 1.64.2.
+2022.02.22 15:27:54 INFO  Parse release: 1.8.0_202
+2022.02.22 15:27:58 INFO  time: initialize in 3.34s
+2022.02.22 15:27:59 WARN  Build server is not auto-connectable.
+2022.02.22 15:27:59 WARN  no build tool detected in workspace 'C:\Users\user\Desktop\Project-3'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.02.22 15:28:00 WARN  no build target for: C:\Users\user\Desktop\Project-3\src\main\scala\Ecommerce.scala
+2022.02.22 15:28:04 INFO  no build target found for C:\Users\user\Desktop\Project-3\src\main\scala\Ecommerce.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.22 15:28:08 INFO  time: code lens generation in 6.95s
+2022.02.22 15:28:08 WARN  no build target for: C:\Users\user\Desktop\Project-3\build.sbt
+2022.02.22 15:28:31 WARN  no build target for: C:\Users\user\Desktop\Project-3\build.sbt
+Feb 22, 2022 3:28:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2022.02.22 15:28:33 INFO  running 'C:\Program Files\Java\jdk1.8.0_202\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -Dsbt.version=1.6.1 -jar C:\Users\user\AppData\Local\Temp\metals2338074339874311619\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.02.22 15:28:39 INFO  [info] Updated file C:\Users\user\Desktop\Project-3\project\build.properties: set sbt.version to 1.6.1
+2022.02.22 15:28:39 INFO  [info] welcome to sbt 1.6.1 (Oracle Corporation Java 1.8.0_202)
+2022.02.22 15:28:48 INFO  [info] loading settings for project project-3-build-build from metals.sbt ...
+2022.02.22 15:28:50 INFO  [info] loading project definition from C:\Users\user\Desktop\Project-3\project\project
+2022.02.22 15:29:02 INFO  [info] loading settings for project project-3-build from metals.sbt ...
+2022.02.22 15:29:02 INFO  [info] loading project definition from C:\Users\user\Desktop\Project-3\project
+2022.02.22 15:29:12 INFO  [success] Generated .bloop\project-3-build.json
+2022.02.22 15:29:12 INFO  [success] Total time: 9 s, completed Feb 22, 2022 3:29:13 PM
+2022.02.22 15:29:19 INFO  [info] loading settings for project project-3 from build.sbt ...
+2022.02.22 15:29:19 INFO  [info] set current project to KafkaSparkIntegration (in build file:/C:/Users/user/Desktop/Project-3/)
+2022.02.22 15:29:30 INFO  [success] Generated .bloop\project-3.json
+2022.02.22 15:29:30 INFO  [success] Generated .bloop\project-3-test.json
+2022.02.22 15:29:30 INFO  [success] Total time: 11 s, completed Feb 22, 2022 3:29:31 PM
+2022.02.22 15:29:31 INFO  time: ran 'sbt bloopInstall' in 57s
+2022.02.22 15:29:31 INFO  Attempting to connect to the build server...
+2022.02.22 15:29:31 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\user\Desktop\Project-3\.metals\bsp.trace.json or C:\Users\user\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.22 15:29:31 INFO  Attempting to connect to the build server...
+2022.02.22 15:29:31 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\user\Desktop\Project-3\project\.metals\bsp.trace.json or C:\Users\user\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.22 15:29:32 INFO  time: Connected to build server in 1.3s
+2022.02.22 15:29:32 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.22 15:29:33 INFO  time: Imported build in 0.32s
+2022.02.22 15:29:46 INFO  time: indexed workspace in 12s
+2022.02.22 15:29:56 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:30:06 INFO  time: compiled project-3 in 10s
+2022.02.22 15:33:55 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:33:56 INFO  time: compiled project-3 in 1.06s
+2022.02.22 15:37:23 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:37:23 INFO  time: compiled project-3 in 0.84s
+Feb 22, 2022 3:37:24 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2022.02.22 15:37:26 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:37:26 INFO  time: compiled project-3 in 0.81s
+2022.02.22 15:45:50 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:45:50 INFO  time: compiled project-3 in 0.82s
+2022.02.22 15:46:33 INFO  compiling project-3 (1 scala source)
+2022.02.22 15:46:38 INFO  time: compiled project-3 in 4.89s
