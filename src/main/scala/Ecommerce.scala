@@ -1,10 +1,12 @@
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.SparkConf
+import scala.util.Random.nextInt
+import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
 
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
-        val spark = SparkSession
+        /*val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
@@ -30,12 +32,37 @@ object EcommerceProj {
         def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
         var name = "dsd"
         var Id = "sdsd"
-        var website
-        val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
+        //var website
+        //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
-
+        */
+        randomGenerator()
     }
 
+    def randomGenerator(): Unit = {
+        
+            val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
+            val nouns = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
+    
+        
+        def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
+    
+        def getRandNumber(ra: Range): String = {
+            (ra.head + nextInt(ra.end - ra.head)).toString
+        }
+            
+        def haiku: String = {
+            val xs = getRandNumber(1000 to 9999) :: List(nouns, firstNames).map(getRandElt)
+            xs.reverse.mkString(",")
+
+            
+        }
+        println(haiku)
+        
+        
+        
+    }
+    
 
     
 }
