@@ -3,8 +3,9 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.SparkConf
 import scala.util.Random.nextInt
 import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
+import scala.util.Random.nextInt
 
-object EcommerceProj {
+object websites {
     def main(args:Array[String]): Unit = {
         /*val spark = SparkSession
             .builder
@@ -40,28 +41,15 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
-        
-            val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
-            val nouns = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
     
-        
-        def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
-    
-        def getRandNumber(ra: Range): String = {
-            (ra.head + nextInt(ra.end - ra.head)).toString
-        }
-            
-        def haiku: String = {
-            val xs = getRandNumber(1000 to 9999) :: List(nouns, firstNames).map(getRandElt)
-            xs.reverse.mkString(",")
+    var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
+    "www.happyy.com", "www.eatvegtables.com", "www.thetable.com", "www.isbroken.com" , "wwww.crystals.com", "www.nomatter.com", "www.intersteller.com", "www.whynot.com", "www.blah.com")
 
-            
-        }
-        println(haiku)
-        
-        
-        
-    }
+    var ran = new scala.util.Random
+
+    println(emails(ran.nextInt(emails.size)))
+}
+
     
 
     
