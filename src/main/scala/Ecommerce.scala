@@ -47,23 +47,20 @@ object EcommerceProj {
 
 
         def nameGenerator(): Unit = {
-
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
-        
-        def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
+            
+            def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
     
-        def getRandNumber(ra: Range): String = {
-            (ra.head + nextInt(ra.end - ra.head)).toString
-        }
+            def getRandNumber(ra: Range): String = {
+                (ra.head + nextInt(ra.end - ra.head)).toString
+                }
             
-        def haiku: String = {
-            val xs = getRandNumber(1000 to 9999) :: List(lastNames, firstNames).map(getRandElt)
-            xs.reverse.mkString(",")
-
-            
-        }
-        // println(haiku)
+            def haiku: String = {
+                val xs = getRandNumber(1000 to 9999) :: List(lastNames, firstNames).map(getRandElt)
+                xs.reverse.mkString(",")
+                }
+            // println(haiku)
         
             }
 
