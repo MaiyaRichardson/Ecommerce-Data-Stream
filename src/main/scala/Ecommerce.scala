@@ -40,10 +40,16 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
-        
+        nameGenerator()
+        countryCityGenerator()
+
+
+
+
+        def nameGenerator(): Unit = {
+
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
-            val nouns = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
-    
+            val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
         
         def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
     
@@ -52,14 +58,45 @@ object EcommerceProj {
         }
             
         def haiku: String = {
-            val xs = getRandNumber(1000 to 9999) :: List(nouns, firstNames).map(getRandElt)
+            val xs = getRandNumber(1000 to 9999) :: List(lastNames, firstNames).map(getRandElt)
             xs.reverse.mkString(",")
 
             
         }
-        println(haiku)
+        // println(haiku)
         
-        
+            }
+
+        def countryCityGenerator(): Unit = {
+            val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
+            val cities = List("New York City", "Boston", "Los Angeles","Miami", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Birmingham", "London", "Liverpool","Manchester","Vancouver","Toronto","Ontario","British Columbia","Tokyo","Kyoto","Osaka","Yokohama","Seoul","Busan","Daegu","Gwangju", "Sao Paulo","Rio de Janeiro","Brasilia","Salvador","Bogota","Leticia","Barranquilla","Medellin")
+
+            var randCountry = countries(nextInt(countries.length))
+            var randCity = ""
+            
+                randCountry match {
+                    case "USA" =>
+                        randCity = cities(nextInt(4))
+                    case "India" =>
+                        randCity = cities(nextInt(4)+4)
+                    case "UK" =>
+                        randCity = cities(nextInt(4)+8)
+                    case "Canada" =>
+                        randCity = cities(nextInt(4)+12)
+                    case "Japan" =>
+                        randCity = cities(nextInt(4)+16)
+                    case "Korea" =>
+                        randCity = cities(nextInt(4)+20)
+                    case "Brazil" =>
+                        randCity = cities(nextInt(4)+24)
+                    case "Colombia" =>
+                        randCity = cities(nextInt(4)+28)
+                    case _ =>
+                        println("default")
+                }
+            println(randCountry)
+            println(randCity)
+        }
         
     }
     
