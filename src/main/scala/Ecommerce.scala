@@ -40,8 +40,10 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
+
         nameGenerator()
         countryCityGenerator()
+        productNameCategoryGenerator()
 
 
 
@@ -93,6 +95,32 @@ object EcommerceProj {
                 }
             println(randCountry)
             println(randCity)
+        }
+
+
+        def productNameCategoryGenerator(): Unit = {
+            val categories = List("Stationery", "Electronics","Books","Clothing","Music")
+            val names = List("Pen","Pencil","Notepad","Markers","iPad","CellPhone", "TV","laptop","Harry Potter","A Game of Thrones", "The Da Vinci Code", "New Moon", "Yeezy", "Gucci", "Yves Saint Laurent", "Hermes", "ANTI", "YEEZUS", "Certified Lover Boy", "Happier Than Ever")
+
+            var randProdCat = categories(nextInt(categories.length))
+            var randProdName = ""
+            
+                randProdCat match {
+                    case "Stationery" =>
+                        randProdName = names(nextInt(4))
+                    case "Electronics" =>
+                        randProdName = names(nextInt(4)+4)
+                    case "Books" =>
+                        randProdName = names(nextInt(4)+8)
+                    case "Clothing" =>
+                        randProdName = names(nextInt(4)+12)
+                    case "Music" =>
+                        randProdName = names(nextInt(4)+16)
+                    case _ =>
+                        println("default")
+                }
+            println(randProdCat)
+            println(randProdName)
         }
         
     }

@@ -31,3 +31,16 @@ java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnect
 Feb 23, 2022 3:22:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 34
 2022.02.23 15:24:33 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 15:45:09 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+Feb 23, 2022 3:51:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 998
+Feb 23, 2022 3:52:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1126
+2022.02.23 15:53:51 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 15:54:39 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 15:55:16 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\build.sbt
+2022.02.23 16:00:22 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 16:00:33 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 16:00:34 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 16:01:16 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
+2022.02.23 16:02:07 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
