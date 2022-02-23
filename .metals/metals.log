@@ -1,65 +1,16 @@
-2022.02.23 15:19:31 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\gianc\Desktop\Revature\Project-3\.metals\lsp.trace.json or C:\Users\gianc\AppData\Local\scalameta\metals\cache\lsp.trace.json
-2022.02.23 15:19:32 INFO  logging to file C:\Users\gianc\Desktop\Revature\Project-3\.metals\metals.log
-2022.02.23 15:19:32 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\gianc\Desktop\Revature\Project-3' for client Visual Studio Code 1.64.2.
-2022.02.23 15:19:32 INFO  Parse release: 11.0.11
-2022.02.23 15:19:34 INFO  time: initialize in 1.87s
-2022.02.23 15:19:38 INFO  Attempting to connect to the build server...
-2022.02.23 15:19:38 INFO  skipping build import with status 'Installed'
-2022.02.23 15:19:38 ERROR Starting the bsp launcher for bloop...
-2022.02.23 15:19:38 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 44149'...
-2022.02.23 15:19:38 ERROR Waiting for the bsp connection to come up...
-2022.02.23 15:19:38 ERROR error: The command bsp --protocol tcp --port 44149 returned with an error
-2022.02.23 15:19:38 ERROR > 
-2022.02.23 15:19:38 ERROR error: The launcher failed to establish a bsp connection, aborting...
-2022.02.23 15:19:38 ERROR Failed to connect with build server, no functionality will work.
-java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
-	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:95)
-	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:122)
-	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:169)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.lang.Thread.run(Thread.java:829)
-
-2022.02.23 15:19:38 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 15:19:41 INFO  no build target found for C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala. Using presentation compiler with project's scala-library version: 3.1.0
-2022.02.23 15:19:43 INFO  time: code lens generation in 3.69s
-2022.02.23 15:19:43 INFO  time: code lens generation in 3.7s
-2022.02.23 15:19:43 INFO  time: code lens generation in 3.7s
-2022.02.23 15:19:43 INFO  time: code lens generation in 3.7s
-Feb 23, 2022 3:22:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 34
-2022.02.23 15:24:33 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 15:45:09 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-Feb 23, 2022 3:51:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 998
-Feb 23, 2022 3:52:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 1126
-2022.02.23 15:53:51 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 15:54:39 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 15:55:16 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\build.sbt
-2022.02.23 16:00:22 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:00:33 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:00:34 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:01:16 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:02:07 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:02:18 WARN  no build target for: C:\Users\gianc\Desktop\Revature\Project-3\src\main\scala\Ecommerce.scala
-2022.02.23 16:09:11 INFO  shutting down Metals
-2022.02.23 16:30:47 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\gianc\Desktop\Revature\Project-3\.metals\lsp.trace.json or C:\Users\gianc\AppData\Local\scalameta\metals\cache\lsp.trace.json
-2022.02.23 16:30:47 INFO  logging to file C:\Users\gianc\Desktop\Revature\Project-3\.metals\metals.log
-2022.02.23 16:30:47 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\gianc\Desktop\Revature\Project-3' for client Visual Studio Code 1.64.2.
-2022.02.23 16:30:47 INFO  Parse release: 11.0.11
-2022.02.23 16:30:49 INFO  time: initialize in 1.72s
-2022.02.23 16:30:50 INFO  Attempting to connect to the build server...
-2022.02.23 16:30:49 INFO  skipping build import with status 'Installed'
-2022.02.23 16:30:50 ERROR Starting the bsp launcher for bloop...
-2022.02.23 16:30:50 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 19392'...
-2022.02.23 16:30:50 ERROR Waiting for the bsp connection to come up...
-2022.02.23 16:30:50 ERROR error: The command bsp --protocol tcp --port 19392 returned with an error
-2022.02.23 16:30:50 ERROR > 
-2022.02.23 16:30:50 ERROR error: The launcher failed to establish a bsp connection, aborting...
-2022.02.23 16:30:50 ERROR Failed to connect with build server, no functionality will work.
+2022.02.23 16:35:09 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\gianc\Desktop\Revature\Project-3\.metals\lsp.trace.json or C:\Users\gianc\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.23 16:35:10 INFO  logging to file C:\Users\gianc\Desktop\Revature\Project-3\.metals\metals.log
+2022.02.23 16:35:10 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\gianc\Desktop\Revature\Project-3' for client Visual Studio Code 1.64.2.
+2022.02.23 16:35:10 INFO  Parse release: 11.0.11
+2022.02.23 16:35:12 INFO  time: initialize in 1.79s
+2022.02.23 16:35:12 INFO  Attempting to connect to the build server...
+2022.02.23 16:35:12 ERROR Starting the bsp launcher for bloop...
+2022.02.23 16:35:12 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 26175'...
+2022.02.23 16:35:12 ERROR Waiting for the bsp connection to come up...
+2022.02.23 16:35:12 ERROR error: The command bsp --protocol tcp --port 26175 returned with an error
+2022.02.23 16:35:12 ERROR > 
+2022.02.23 16:35:12 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.02.23 16:35:12 ERROR Failed to connect with build server, no functionality will work.
 java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
 	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:95)
 	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:122)
