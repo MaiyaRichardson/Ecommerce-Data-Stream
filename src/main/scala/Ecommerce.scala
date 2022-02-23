@@ -116,6 +116,7 @@ object EcommerceProj {
                         randProdName = names(nextInt(4)+12)
                     case "Music" =>
                         randProdName = names(nextInt(4)+16)
+                        
                     case _ =>
                         println("default")
                 }
