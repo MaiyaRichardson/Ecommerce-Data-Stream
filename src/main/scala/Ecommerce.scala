@@ -35,7 +35,7 @@ object EcommerceProj {
         //var website
         //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
-        */
+       
         randomGenerator()
     }
 
@@ -59,10 +59,19 @@ object EcommerceProj {
         }
         println(haiku)
         
-        
-        
-    }
+         */
+       
+    
+      //payment transaction ID number generator created.     
+         payment_txn_id()
+
+        def payment_txn_id():Unit={
+          val randomID=scala.util.Random
+         val r= randomID.nextInt(9999)
+          println(r)
+         
+         }
     
 
-    
+    }
 }
