@@ -53,3 +53,163 @@ INFO: compiler crashed due to an error in the Scala compiler, retrying with new 
 2022.02.22 16:01:41 INFO  time: compiled project-3 in 0.25s
 2022.02.22 16:01:59 INFO  compiling project-3 (1 scala source)
 2022.02.22 16:01:59 INFO  time: compiled project-3 in 0.79s
+2022.02.23 14:50:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\Project-3\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.23 14:50:52 INFO  logging to file E:\Big-Data\Project-3\.metals\metals.log
+2022.02.23 14:50:52 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\Project-3' for client Visual Studio Code 1.64.2.
+2022.02.23 14:50:52 INFO  Parse release: 1.8.0_292
+2022.02.23 14:50:53 INFO  time: initialize in 1.09s
+2022.02.23 14:50:58 INFO  Attempting to connect to the build server...
+2022.02.23 14:50:58 ERROR Starting the bsp launcher for bloop...
+2022.02.23 14:50:58 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 29775'...
+2022.02.23 14:50:58 ERROR Waiting for the bsp connection to come up...
+2022.02.23 14:50:58 ERROR error: The command bsp --protocol tcp --port 29775 returned with an error
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Loading 2 projects from 'e:\Big-Data\Project-3\.bloop'...
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Loading project from 'e:\Big-Data\Project-3\.bloop\project-3.json'
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Loading project from 'e:\Big-Data\Project-3\.bloop\project-3-test.json'
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[33m[W][0m Scala instance jar C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m Elapsed: 25.5627 ms
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[32m[D][0m   => C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[31m[E][0m Failed to load project from e:\Big-Data\Project-3\.bloop\project-3.json
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from e:\Big-Data\Project-3\.bloop\project-3.json
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:280)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m Caused by: java.nio.file.NoSuchFileException: C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:193)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.nio.file.Files.readAttributes(Files.java:1737)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$hashCode$1(ScalaInstance.scala:82)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:38)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map(TraversableLike.scala:286)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.collection.AbstractTraversable.map(Traversable.scala:108)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:78)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:152)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:157)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:157)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:297)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:292)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:274)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.02.23 14:50:58 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.02.23 14:50:58 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.02.23 14:50:58 ERROR Failed to connect with build server, no functionality will work.
+java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:95)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:122)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022.02.23 14:50:58 WARN  no build target for: E:\Big-Data\Project-3\build.sbt
+2022.02.23 14:50:59 INFO  running 'C:\Users\Work\.jabba\jdk\adopt@1.8.0-292\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\Work\AppData\Local\Temp\metals2834046389107595008\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.02.23 14:51:00 INFO  no build target found for E:\Big-Data\Project-3\build.sbt. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.23 14:51:01 INFO  [info] welcome to sbt 1.6.1 (AdoptOpenJDK Java 1.8.0_292)
+2022.02.23 14:51:01 INFO  [info] loading settings for project project-3-build-build from metals.sbt ...
+2022.02.23 14:51:02 INFO  [info] loading project definition from E:\Big-Data\Project-3\project\project
+2022.02.23 14:51:04 INFO  [info] loading settings for project project-3-build from metals.sbt ...
+2022.02.23 14:51:04 INFO  [info] loading project definition from E:\Big-Data\Project-3\project
+2022.02.23 14:51:05 INFO  [warn] sbt-bloop-1.4.12-sources.jar no longer exists at C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\ch\epfl\scala\sbt-bloop_2.12_1.0\1.4.12\sbt-bloop-1.4.12-sources.jar
+2022.02.23 14:51:05 INFO  [success] Generated .bloop\project-3-build.json
+2022.02.23 14:51:05 INFO  [success] Total time: 2 s, completed Feb 23, 2022 2:51:06 PM
+2022.02.23 14:51:07 INFO  [info] loading settings for project project-3 from build.sbt ...
+2022.02.23 14:51:07 INFO  [info] set current project to KafkaSparkIntegration (in build file:/E:/Big-Data/Project-3/)
+2022.02.23 14:51:10 INFO  [warn] scala-library-2.11.12-sources.jar no longer exists at C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12-sources.jar
+2022.02.23 14:51:11 INFO  [success] Generated .bloop\project-3.json
+2022.02.23 14:51:11 INFO  [success] Generated .bloop\project-3-test.json
+2022.02.23 14:51:11 INFO  [success] Total time: 4 s, completed Feb 23, 2022 2:51:11 PM
+2022.02.23 14:51:11 INFO  time: ran 'sbt bloopInstall' in 12s
+2022.02.23 14:51:11 INFO  Attempting to connect to the build server...
+2022.02.23 14:51:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.23 14:51:11 INFO  Attempting to connect to the build server...
+2022.02.23 14:51:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.23 14:51:11 INFO  time: Connected to build server in 88ms
+2022.02.23 14:51:11 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.23 14:51:17 INFO  time: indexed workspace in 5.39s
+2022.02.23 14:52:02 INFO  compiling project-3 (3 scala sources)
+2022.02.23 14:52:02 INFO  time: compiled project-3 in 0.41s
+2022.02.23 20:15:24 INFO  compiling project-3 (3 scala sources)
+2022.02.23 20:15:25 INFO  time: compiled project-3 in 1.01s
+2022.02.23 21:19:15 INFO  compiling project-3 (3 scala sources)
+2022.02.23 21:19:15 INFO  time: compiled project-3 in 0.85s
+2022.02.23 21:19:32 INFO  compiling project-3 (3 scala sources)
+2022.02.23 21:19:32 INFO  time: compiled project-3 in 0.33s
+2022.02.23 21:19:36 INFO  compiling project-3 (3 scala sources)
+2022.02.23 21:19:36 INFO  time: compiled project-3 in 0.34s
+2022.02.23 21:19:41 INFO  compiling project-3 (3 scala sources)
+2022.02.23 21:19:41 INFO  time: compiled project-3 in 0.49s
+2022.02.23 21:19:45 INFO  compiling project-3 (3 scala sources)
+2022.02.23 21:19:45 INFO  time: compiled project-3 in 0.41s
+2022.02.24 06:36:53 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\Project-3\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.24 06:36:53 INFO  logging to file E:\Big-Data\Project-3\.metals\metals.log
+2022.02.24 06:36:53 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\Project-3' for client Visual Studio Code 1.64.2.
+2022.02.24 06:36:53 INFO  Parse release: 1.8.0_292
+2022.02.24 06:36:55 INFO  time: initialize in 1.61s
+2022.02.24 06:37:00 INFO  Attempting to connect to the build server...
+2022.02.24 06:37:00 INFO  skipping build import with status 'Installed'
+2022.02.24 06:37:03 INFO  no build target found for E:\Big-Data\Project-3\src\main\scala\Hello_World.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.24 06:37:06 INFO  time: code lens generation in 5.2s
+2022.02.24 06:37:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.24 06:37:07 INFO  Attempting to connect to the build server...
+2022.02.24 06:37:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.24 06:37:07 INFO  time: Connected to build server in 7.71s
+2022.02.24 06:37:07 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.24 06:37:07 INFO  time: Imported build in 0.18s
+2022.02.24 06:37:19 INFO  time: indexed workspace in 10s
+2022.02.24 06:37:39 INFO  Deduplicating compilation of project-3 from bsp client 'Metals 0.11.1' (since 31.47s)
+2022.02.24 06:37:39 INFO  compiling project-3 (3 scala sources)
+2022.02.24 06:37:39 INFO  compiling project-3 (3 scala sources)
+2022.02.24 06:37:41 INFO  time: compiled project-3 in 1.66s
+2022.02.24 06:37:44 INFO  compiling project-3 (3 scala sources)
+2022.02.24 06:37:44 INFO  time: compiled project-3 in 0.33s
+2022.02.24 06:42:16 INFO  compiling project-3 (3 scala sources)
+2022.02.24 06:42:16 INFO  time: compiled project-3 in 0.34s
