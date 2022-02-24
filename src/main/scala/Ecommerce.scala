@@ -3,6 +3,9 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.SparkConf
 import scala.util.Random.nextInt
 import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
+import java.math.BigInteger
+import scala.util.matching.Regex
+
 
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
@@ -36,10 +39,21 @@ object EcommerceProj {
         //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
         */
+        
         randomGenerator()
     }
 
     def randomGenerator(): Unit = {
+
+        val spark = SparkSession
+            .builder
+            .appName("KafkaSparkIntegration")
+            .master("local")
+            .getOrCreate()
+
+        spark.sparkContext.setLogLevel("WARN")
+
+        import spark.implicits._
         
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val nouns = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
@@ -58,10 +72,32 @@ object EcommerceProj {
             
         }
         println(haiku)
+        println()
+        def RandNum(): Unit = {
+            var res = BigInt("0")
+            val a = BigInt("26525285981219105863630848482795")
+            //val x = (1 to a).map { e => (e + 1) }
+            //val x = List.tabulate(9999)(_ + 1)
+            
+            //println(x)
+
+        }
+        
+        def from(start: Int): Stream[Int] = Stream.cons(start, from(start + 1))
+            val nn = from(0) 
+            println(nn.take(99).mkString(","))
+            Thread.sleep(1000) // wait for 100 millisecond
         
         
+        
+
+
         
     }
+
+     
+
+    
     
 
     
