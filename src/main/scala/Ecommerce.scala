@@ -44,58 +44,69 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
-<<<<<<< HEAD
 
-        val spark = SparkSession
-            .builder
-            .appName("KafkaSparkIntegration")
-            .master("local")
-            .getOrCreate()
-
-        spark.sparkContext.setLogLevel("WARN")
-
-        import spark.implicits._
-        
-            val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
-            val nouns = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
-    
-        
-        def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
-    
-        def getRandNumber(ra: Range): String = {
-            (ra.head + nextInt(ra.end - ra.head)).toString
-        }
+        while(true){
+            nameGenerator()
             
-        def haiku: String = {
-            val xs = getRandNumber(1000 to 9999) :: List(nouns, firstNames).map(getRandElt)
-            xs.reverse.mkString(",")
-=======
->>>>>>> fec1b51212415922f9a7dc20ca7de2916ef10e4a
-
-        nameGenerator()
-        countryCityGenerator()
-        productNameCategoryGenerator()
-
-
+            Thread.sleep(2000) // wait for 2 seconds
+        }
+        //nameGenerator()
+        //countryCityGenerator()
+        //productNameCategoryGenerator()
 
 
         def nameGenerator(): Unit = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
             
-            def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
-    
-            def getRandNumber(ra: Range): String = {
-                (ra.head + nextInt(ra.end - ra.head)).toString
-                }
+            var randFirstNames = firstNames(nextInt(firstNames.length))
+            var randlastNames = ""
             
-            def haiku: String = {
-                val xs = getRandNumber(1000 to 9999) :: List(lastNames, firstNames).map(getRandElt)
-                xs.reverse.mkString(",")
+            
+                randFirstNames match {
+                    case "Steve" =>
+                        randlastNames = lastNames(nextInt(4))
+                    case "Tony" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Peter" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Miles" =>
+                        randlastNames = lastNames(nextInt(4)+12)
+                    case "Cameron" =>
+                        randlastNames = lastNames(nextInt(4)+16)
+                    case "Kyle" =>
+                        randlastNames = lastNames(nextInt(4)+18)
+                    case "Brandon" =>
+                        randlastNames = lastNames(nextInt(4)+22)
+                    case "Summer" =>
+                        randlastNames = lastNames(nextInt(4)+24)
+                    case "Sunshine" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Autumn" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Sharyar" =>
+                        randlastNames = lastNames(nextInt(4))
+                    case "Keisha" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Hardik" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Daulton" =>
+                        randlastNames = lastNames(nextInt(4)+12)
+                    case "Aububacar" =>
+                        randlastNames = lastNames(nextInt(4)+16)
+                    case "Giancarlos" =>
+                        randlastNames = lastNames(nextInt(4)+18)
+                    case "Alvin" =>
+                        randlastNames = lastNames(nextInt(4)+20)
+                    case "Mai" =>
+                        randlastNames = lastNames(nextInt(4)+22)
+                    case _ =>
+                        println("default")
+                    
                 }
-            // println(haiku)
-        
-            }
+            println(randFirstNames + "," + randlastNames)
+            
+        }
 
         def countryCityGenerator(): Unit = {
             val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
@@ -124,8 +135,8 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            println(randCountry)
-            println(randCity)
+            println(randCountry + "," + randCity)
+            
         }
 
 
@@ -150,11 +161,10 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            println(randProdCat)
-            println(randProdName)
+            println(randProdCat + "," + randProdName)
+           
         }
-<<<<<<< HEAD
-        println(haiku)
+        
         println()
         def RandNum(): Unit = {
             var res = BigInt("0")
@@ -168,12 +178,10 @@ object EcommerceProj {
         
         def from(start: Int): Stream[Int] = Stream.cons(start, from(start + 1))
             val nn = from(0) 
-            println(nn.take(99).mkString(","))
-            Thread.sleep(1000) // wait for 100 millisecond
+            //println(nn.take(99).mkString(","))
+            Thread.sleep(2000) // wait for 2 seconds
         
         
-=======
->>>>>>> fec1b51212415922f9a7dc20ca7de2916ef10e4a
         
 
 
