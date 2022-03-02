@@ -229,3 +229,200 @@ java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnect
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
+2022.03.02 14:21:45 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/zenw/Project-3/.metals/lsp.trace.json or /Users/zenw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.03.02 14:21:45 INFO  logging to file /Users/zenw/Project-3/.metals/metals.log
+2022.03.02 14:21:45 INFO  Started: Metals version 0.11.1 in workspace '/Users/zenw/Project-3' for client Visual Studio Code 1.63.2.
+2022.03.02 14:21:45 INFO  Parse release: 1.8.0_311
+2022.03.02 14:21:47 INFO  time: initialize in 1.33s
+2022.03.02 14:21:47 INFO  Attempting to connect to the build server...
+2022.03.02 14:21:48 INFO  skipping build import with status 'Requested'
+2022.03.02 14:21:55 ERROR Starting the bsp launcher for bloop...
+2022.03.02 14:21:55 ERROR Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/df/38fdz05976z07jn109w940r80000gn/T/bsp-launcher3480548556068530162/bsp.socket'...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR error: The command bsp --protocol local --socket /var/folders/df/38fdz05976z07jn109w940r80000gn/T/bsp-launcher3480548556068530162/bsp.socket returned with an error
+2022.03.02 14:21:55 ERROR > No server running at 127.0.0.1:8212, let's fire one...
+2022.03.02 14:21:55 ERROR > Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.12...
+2022.03.02 14:21:55 ERROR > Starting bloop server at 127.0.0.1:8212...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > Attempting a connection to the server...
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading 2 projects from '/Users/zenw/Project-3/.bloop'...
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading project from '/Users/zenw/Project-3/.bloop/project-3.json'
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading project from '/Users/zenw/Project-3/.bloop/project-3-test.json'
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.03.02 14:21:55 ERROR > bloop.data.Project$ProjectReadException: Failed to load project from /Users/zenw/Project-3/.bloop/project-3.json
+2022.03.02 14:21:55 ERROR > 	at bloop.data.Project$.fromBytesAndOrigin(Project.scala:280)
+2022.03.02 14:21:55 ERROR > 	at bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.03.02 14:21:55 ERROR > 	at bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.03.02 14:21:55 ERROR > 	at monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.03.02 14:21:55 ERROR > 	at monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.03.02 14:21:55 ERROR > 	at monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.03.02 14:21:55 ERROR > 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.03.02 14:21:55 ERROR > 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.03.02 14:21:55 ERROR > 	at java.lang.Thread.run(Thread.java:748)
+2022.03.02 14:21:55 ERROR > Caused by: java.lang.RuntimeException: Missing compiler jar in Scala jars /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > 	at scala.sys.package$.error(package.scala:30)
+2022.03.02 14:21:55 ERROR > 	at bloop.ScalaInstance.$anonfun$compilerJar$2(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > 	at scala.Option.getOrElse(Option.scala:189)
+2022.03.02 14:21:55 ERROR > 	at bloop.ScalaInstance.<init>(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > 	at bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:152)
+2022.03.02 14:21:55 ERROR > 	at bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > 	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+2022.03.02 14:21:55 ERROR > 	at bloop.ScalaInstance$.apply(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > 	at bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:297)
+2022.03.02 14:21:55 ERROR > 	at scala.Option.flatMap(Option.scala:271)
+2022.03.02 14:21:55 ERROR > 	at bloop.data.Project$.fromConfig(Project.scala:292)
+2022.03.02 14:21:55 ERROR > 	at bloop.data.Project$.fromBytesAndOrigin(Project.scala:274)
+2022.03.02 14:21:55 ERROR > 	... 8 more
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Elapsed: 398.670208 ms
+2022.03.02 14:21:55 ERROR > [0m[31m[E][0m Failed to load project from /Users/zenw/Project-3/.bloop/project-3-test.json
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from /Users/zenw/Project-3/.bloop/project-3-test.json
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:280)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m Caused by: java.lang.RuntimeException: Missing compiler jar in Scala jars /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.sys.package$.error(package.scala:30)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$compilerJar$2(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.Option.getOrElse(Option.scala:189)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:152)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:297)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:292)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:274)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.03.02 14:21:55 ERROR error: Trying a tcp-based connection to the server instead...
+2022.03.02 14:21:55 ERROR Opening a bsp server connection with 'bsp --protocol tcp --port 41519'...
+2022.03.02 14:21:55 ERROR Waiting for the bsp connection to come up...
+2022.03.02 14:21:55 ERROR error: The command bsp --protocol tcp --port 41519 returned with an error
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading workspace settings from bloop.settings.json
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading 2 projects from '/Users/zenw/Project-3/.bloop'...
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading project from '/Users/zenw/Project-3/.bloop/project-3.json'
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Loading project from '/Users/zenw/Project-3/.bloop/project-3-test.json'
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[33m[W][0m Scala instance jar /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar doesn't exist!
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m   => /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+2022.03.02 14:21:55 ERROR > [0m[32m[D][0m Elapsed: 41.679 ms
+2022.03.02 14:21:55 ERROR > [0m[31m[E][0m Failed to load project from /Users/zenw/Project-3/.bloop/project-3.json
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m bloop.data.Project$ProjectReadException: Failed to load project from /Users/zenw/Project-3/.bloop/project-3.json
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:280)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m Caused by: java.lang.RuntimeException: Missing compiler jar in Scala jars /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar, /Users/zenw/Project-3/C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.sys.package$.error(package.scala:30)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.$anonfun$compilerJar$2(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.Option.getOrElse(Option.scala:189)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance.<init>(ScalaInstance.scala:27)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.newInstance$1(ScalaInstance.scala:152)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.$anonfun$apply$7(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.ScalaInstance$.apply(ScalaInstance.scala:157)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.$anonfun$fromConfig$1(Project.scala:297)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	scala.Option.flatMap(Option.scala:271)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromConfig(Project.scala:292)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.data.Project$.fromBytesAndOrigin(Project.scala:274)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.loadProject(BuildLoader.scala:256)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	bloop.engine.BuildLoader$.$anonfun$loadBuildIncrementally$3(BuildLoader.scala:60)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2022.03.02 14:21:55 ERROR > [0m[36m[T][0m 	java.lang.Thread.run(Thread.java:748)
+2022.03.02 14:21:55 ERROR error: The launcher failed to establish a bsp connection, aborting...
+2022.03.02 14:21:55 ERROR Failed to connect with build server, no functionality will work.
+java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:95)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:122)
+	at scala.meta.internal.metals.BloopServers$$anon$2.run(BloopServers.scala:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022.03.02 14:21:55 WARN  no build target for: /Users/zenw/Project-3/src/main/scala/websites.scala
+2022.03.02 14:21:55 INFO  no build target found for /Users/zenw/Project-3/src/main/scala/websites.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.03.02 14:21:59 INFO  time: code lens generation in 10s
+2022.03.02 14:22:06 WARN  no build target for: /Users/zenw/Project-3/src/main/scala/websites.scala
