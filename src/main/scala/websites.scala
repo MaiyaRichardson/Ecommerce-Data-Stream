@@ -42,13 +42,17 @@ object websites {
 
     def randomGenerator(): Unit = {
     
+    def emailg(): String = {
     var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
     "www.happyy.com", "www.eatvegtables.com", "www.thetable.com", "www.isbroken.com" , "wwww.crystals.com", "www.nomatter.com", "www.intersteller.com", "www.whynot.com", "www.blah.com","www.hesjks.com","www.goodbye.com","www.welcome.comrun")
 
     var ran = new scala.util.Random
 
-    println(emails(ran.nextInt(emails.size)))
+   var emails = println(emails(ran.nextInt(emails.size)))
+   return emails;
+    }
 }
+
 
     
 
