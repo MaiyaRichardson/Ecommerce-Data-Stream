@@ -5,7 +5,13 @@ import scala.util.Random.nextInt
 import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
 import java.math.BigInteger
 import scala.util.matching.Regex
-
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit.{DAYS,MINUTES}
+import java.util.Random
+import java.time.LocalDate
+import scala.io._
+import java.io.File
+import java.util.UUID.randomUUID
 
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
@@ -40,12 +46,19 @@ object EcommerceProj {
         df.write.csv("s3://my-bucket/dummy-data/")
         */
         
-        randomGenerator()
+        while(true){
+           randomGenerator() 
+        }
+        
+        //val csvFields1 = List(id, qty, price)
     }
 
     def randomGenerator(): Unit = {
+        var res2 = 0
+        var aa=0
 
-        while(true){
+        /*while(true){
+            var prnt = print()
             nameGenerator()
             
             Thread.sleep(2000) // wait for 2 seconds
@@ -53,6 +66,7 @@ object EcommerceProj {
         //nameGenerator()
         //countryCityGenerator()
         //productNameCategoryGenerator()
+        */
 
 
         def nameGenerator(): Unit = {
@@ -162,36 +176,145 @@ object EcommerceProj {
                         println("default")
                 }
             println(randProdCat + "," + randProdName)
-           
         }
         
-        println()
-        def RandNum(): Unit = {
-            var res = BigInt("0")
-            val a = BigInt("26525285981219105863630848482795")
-            //val x = (1 to a).map { e => (e + 1) }
-            //val x = List.tabulate(9999)(_ + 1)
+        
+        def order_id: BigInt = {
+        // val res2 = randomUUID().toString
+            res2 += 1
+
+            return res2
+        }
+        
+        def customer_id: String = {
+            val res2 = randomUUID().toString
+
+            return res2
+        }
+
+        /*while(true){
+            // order id
+            println(order_id + ", " + customer_id)
+
+            // customer id
+            // println(customer_id)
+            Thread.sleep(2000)
+        }
+        */
+        
+            //println(emailg)
+        
+        def emailg(): String = {
+            var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
+            "www.happyy.com", "www.eatvegtables.com", "www.thetable.com", "www.isbroken.com" , "wwww.crystals.com", "www.nomatter.com", "www.intersteller.com", "www.whynot.com", "www.blah.com","www.hesjks.com","www.goodbye.com","www.welcome.comrun")
+
+            var ran = new scala.util.Random
+
+            var x = emails(ran.nextInt(emails.size))
+            return x;
+        }  
+
+        
+        def payment_txn_id(): Int ={
+
+            var i = 0
+            var randomID=nextInt(9999)
+            /*while(true){ 
+                
+                randomID=nextInt(9999)
+                if(randomID < 1000){
+                    randomID+=1000 
+                    println("added 0ne thousand")  
+                }
+            //println(s"^\\d{4}" + randomID)
+
+
+            print(randomID +",")
+            Thread.sleep(2000) // wait for 2000 millisecond
+
+            }  
+            */
+
+            return randomID
+        }
+
+        def randomProductID(): Int = {
+            //var scanner = new Scanner(System.in)
+
+            val r = new scala.util.Random
+            var productID = nextInt(100000)
             
-            //println(x)
+            /*while (true){           
+                productID = r.nextInt(1000000)
+                
+                
+                //println("Product ID:" + productID)  
+                    //for(i<-0 to 100 by 1){
+                    //  println("ProductID:" + r.nextInt(1000000000))
+                    // return productID
+
+            }
+            */
+            return productID
+        }
+
+        def randomTime(): Unit = {
+            val from = LocalDateTime.of(2000, 1, 1,12,45,34)
+
+            val to = LocalDateTime.of(2015, 1, 1,12,55,55)
+
+            val from1 = LocalDate.of(2000,1,1)
+            val to1 = LocalDate.of(2022,2,1)
+                
+            // connect to the database named "mysql" on port 8889 of localhost
+            aa +=1
+            val r = new scala.util.Random
+            println()
+    
+            
+            println()
+            var f = random1(from, to)
+            var g = f.toString
+            var fi = g.split("T")
+            
+            var qty = r.nextInt(50)
+            var price = r.nextInt(10000)
+            var Date = random(from1, to1)+"  "+ fi(1)
+            //println(Date)
+
+            //var exp = randomProductID()
+            var hh = new ja(qty,price,Date.toString)
 
         }
+
+        def random(from1: LocalDate, to1: LocalDate): LocalDate= {
+            val diff = DAYS.between(from1, to1)
         
-        def from(start: Int): Stream[Int] = Stream.cons(start, from(start + 1))
-            val nn = from(0) 
-            //println(nn.take(99).mkString(","))
-            Thread.sleep(2000) // wait for 2 seconds
+            // val di = diff.split("T")
+            val random = new Random(System.nanoTime) // You may want a different seed
+            
+            from1.plusDays(random.nextInt(diff.toInt))
+        }
         
-        
+        def random1(from: LocalDateTime, to: LocalDateTime): LocalDateTime = {
+            val diff = DAYS.between(from, to)
+            //println(diff)
+            // val di = diff.split("T")
+            val random = new Random(System.nanoTime) // You may want a different seed
+            
+            from.plusMinutes(random.nextInt(diff.toInt))
+        }
+
+
+
+
+
         
 
+        
 
         
     }
-
-     
-
-    
-    
 
     
 }
