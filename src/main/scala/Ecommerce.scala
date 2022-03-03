@@ -3,6 +3,15 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.SparkConf
 import scala.util.Random.nextInt
 import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
+import java.math.BigInteger
+import scala.util.matching.Regex
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit.{DAYS,MINUTES}
+import java.util.Random
+import java.time.LocalDate
+import scala.io._
+import java.io.File
+import java.util.UUID.randomUUID
 
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
@@ -11,14 +20,10 @@ object EcommerceProj {
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
-
         spark.sparkContext.setLogLevel("WARN")
-
         import spark.implicits._
-
         val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
         val df = rdd.toDF("Customer_Name", "age")
-
         df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
             .write
             .format("kafka")
@@ -26,9 +31,7 @@ object EcommerceProj {
             .option("kafka.bootstrap.servers","localhost:9092")
             .option("checkpointLocation", "/home/gabrielklein/week11/KafkaSparkIntegration")
             .save()
-
         spark.close()
-
         def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
         var name = "dsd"
         var Id = "sdsd"
@@ -36,46 +39,90 @@ object EcommerceProj {
         //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
         */
-        randomGenerator()
+        
+        while(true){
+            randomGenerator() 
+        }
+        
+        //val csvFields1 = List(id, qty, price)
     }
 
     def randomGenerator(): Unit = {
+        var res2 = 0
+        var aa=0
 
+        /*while(true){
+            var prnt = print()
+            nameGenerator()
+            
+            Thread.sleep(2000) // wait for 2 seconds
+        }
+        //nameGenerator()
+        //countryCityGenerator()
+        //productNameCategoryGenerator()
+        */
 
-        // nameGenerator()
-        // countryCityGenerator()
-        print("string format: " + countryCityGenerator + ","+ productNameCategoryGenerator)
-        // productNameCategoryGenerator()
-
-
-
-        
 
         def nameGenerator(): Unit = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
             
-            def getRandElt[A](xs: List[A]): A = xs.apply(nextInt(xs.size))
-    
-            def getRandNumber(ra: Range): String = {
-                (ra.head + nextInt(ra.end - ra.head)).toString
-                }
+            var randFirstNames = firstNames(nextInt(firstNames.length))
+            var randlastNames = ""
             
-            def haiku: String = {
-                val xs = getRandNumber(1000 to 9999) :: List(lastNames, firstNames).map(getRandElt)
-                xs.reverse.mkString(",")
+            
+                randFirstNames match {
+                    case "Steve" =>
+                        randlastNames = lastNames(nextInt(4))
+                    case "Tony" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Peter" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Miles" =>
+                        randlastNames = lastNames(nextInt(4)+12)
+                    case "Cameron" =>
+                        randlastNames = lastNames(nextInt(4)+16)
+                    case "Kyle" =>
+                        randlastNames = lastNames(nextInt(4)+18)
+                    case "Brandon" =>
+                        randlastNames = lastNames(nextInt(4)+22)
+                    case "Summer" =>
+                        randlastNames = lastNames(nextInt(4)+24)
+                    case "Sunshine" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Autumn" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Sharyar" =>
+                        randlastNames = lastNames(nextInt(4))
+                    case "Keisha" =>
+                        randlastNames = lastNames(nextInt(4)+4)
+                    case "Hardik" =>
+                        randlastNames = lastNames(nextInt(4)+8)
+                    case "Daulton" =>
+                        randlastNames = lastNames(nextInt(4)+12)
+                    case "Aububacar" =>
+                        randlastNames = lastNames(nextInt(4)+16)
+                    case "Giancarlos" =>
+                        randlastNames = lastNames(nextInt(4)+18)
+                    case "Alvin" =>
+                        randlastNames = lastNames(nextInt(4)+20)
+                    case "Mai" =>
+                        randlastNames = lastNames(nextInt(4)+22)
+                    case _ =>
+                        println("default")
+                    
                 }
-            // println(haiku)
-        
-            }
+            println(randFirstNames + "," + randlastNames)
+            
+        }
 
-        def countryCityGenerator(): String = {
+        def countryCityGenerator(): Unit = {
             val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
             val cities = List("New York City", "Boston", "Los Angeles","Miami", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Birmingham", "London", "Liverpool","Manchester","Vancouver","Toronto","Ontario","British Columbia","Tokyo","Kyoto","Osaka","Yokohama","Seoul","Busan","Daegu","Gwangju", "Sao Paulo","Rio de Janeiro","Brasilia","Salvador","Bogota","Leticia","Barranquilla","Medellin")
 
             var randCountry = countries(nextInt(countries.length))
             var randCity = ""
-            var randCountryCity = ""
+            
                 randCountry match {
                     case "USA" =>
                         randCity = cities(nextInt(4))
@@ -96,20 +143,17 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            // println(randCountry)
-            // println(randCity)
-            randCountryCity = randCountry + "," + randCity
-            return randCountryCity
+            println(randCountry + "," + randCity)
+            
         }
 
 
-        def productNameCategoryGenerator(): String = {
+        def productNameCategoryGenerator(): Unit = {
             val categories = List("Stationery", "Electronics","Books","Clothing","Music")
             val names = List("Pen","Pencil","Notepad","Markers","iPad","CellPhone", "TV","laptop","Harry Potter","A Game of Thrones", "The Da Vinci Code", "New Moon", "Yeezy", "Gucci", "Yves Saint Laurent", "Hermes", "ANTI", "YEEZUS", "Certified Lover Boy", "Happier Than Ever")
 
             var randProdCat = categories(nextInt(categories.length))
             var randProdName = ""
-            var randProdCatName = ""
             
                 randProdCat match {
                     case "Stationery" =>
@@ -125,13 +169,141 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            randProdCatName = randProdCat + "," + randProdName
-            return randProdCatName
+            println(randProdCat + "," + randProdName)
         }
         
-        var qtyPriceDate = qty + "," + price + "," + date
-    }
+        
+        def order_id: BigInt = {
+        // val res2 = randomUUID().toString
+            res2 += 1
+
+            return res2
+        }
+        
+        def customer_id: String = {
+            val res2 = randomUUID().toString
+
+            return res2
+        }
+
+        /*while(true){
+            // order id
+            println(order_id + ", " + customer_id)
+            // customer id
+            // println(customer_id)
+            Thread.sleep(2000)
+        }
+        */
+        
+            //println(emailg)
+        
+        def emailg(): String = {
+            var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
+            "www.happyy.com", "www.eatvegtables.com", "www.thetable.com", "www.isbroken.com" , "wwww.crystals.com", "www.nomatter.com", "www.intersteller.com", "www.whynot.com", "www.blah.com","www.hesjks.com","www.goodbye.com","www.welcome.comrun")
+
+            var ran = new scala.util.Random
+
+            var x = emails(ran.nextInt(emails.size))
+            return x;
+        }  
+
+        
+        def payment_txn_id(): Int ={
+
+            var i = 0
+            var randomID=nextInt(9999)
+            /*while(true){ 
+                
+                randomID=nextInt(9999)
+                if(randomID < 1000){
+                    randomID+=1000 
+                    println("added 0ne thousand")  
+                }
+            //println(s"^\\d{4}" + randomID)
+            print(randomID +",")
+            Thread.sleep(2000) // wait for 2000 millisecond
+            }  
+            */
+
+            return randomID
+        }
+
+        def randomProductID(): Int = {
+            //var scanner = new Scanner(System.in)
+
+            val r = new scala.util.Random
+            var productID = nextInt(100000)
+            
+            /*while (true){           
+                productID = r.nextInt(1000000)
+                
+                
+                //println("Product ID:" + productID)  
+                    //for(i<-0 to 100 by 1){
+                    //  println("ProductID:" + r.nextInt(1000000000))
+                    // return productID
+            }
+            */
+            return productID
+        }
+
+        def randomTime(): Unit = {
+            val from = LocalDateTime.of(2000, 1, 1,12,45,34)
+
+            val to = LocalDateTime.of(2015, 1, 1,12,55,55)
+
+            val from1 = LocalDate.of(2000,1,1)
+            val to1 = LocalDate.of(2022,2,1)
+                
+            // connect to the database named "mysql" on port 8889 of localhost
+            aa +=1
+            val r = new scala.util.Random
+            println()
     
+            
+            println()
+            var f = random1(from, to)
+            var g = f.toString
+            var fi = g.split("T")
+            
+            var qty = r.nextInt(50)
+            var price = r.nextInt(10000)
+            var Date = random(from1, to1)+"  "+ fi(1)
+            //println(Date)
+
+            //var exp = randomProductID()
+            var hh = new ja(qty,price,Date.toString)
+
+        }
+
+        def random(from1: LocalDate, to1: LocalDate): LocalDate= {
+            val diff = DAYS.between(from1, to1)
+        
+            // val di = diff.split("T")
+            val random = new Random(System.nanoTime) // You may want a different seed
+            
+            from1.plusDays(random.nextInt(diff.toInt))
+        }
+        
+        def random1(from: LocalDateTime, to: LocalDateTime): LocalDateTime = {
+            val diff = DAYS.between(from, to)
+            //println(diff)
+            // val di = diff.split("T")
+            val random = new Random(System.nanoTime) // You may want a different seed
+            
+            from.plusMinutes(random.nextInt(diff.toInt))
+        }
+
+
+
+
+
+        
+
+        
+
+        
+    }
 
     
 }
