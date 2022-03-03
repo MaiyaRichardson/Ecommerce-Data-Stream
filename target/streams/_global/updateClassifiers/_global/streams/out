@@ -1,4 +1,4 @@
-[warn] scala-library-2.11.12-sources.jar no longer exists at C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12-sources.jar
-[debug] not up to date. inChanged = false, force = false
-[debug] Updating ProjectRef(uri("file:/E:/Big-Data/Project-3/"), "project-3")...
-[debug] Done updating ProjectRef(uri("file:/E:/Big-Data/Project-3/"), "project-3")
+[debug] not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/E:/Big-Data/project3/"), "project3")...
+[debug] Done updating ProjectRef(uri("file:/E:/Big-Data/project3/"), "project3")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
