@@ -52,7 +52,16 @@ object EcommerceProj {
         var res2 = 0
         var aa=0
         // randomTime()
-        
+        nameGenerator()
+        countryCityGenerator()
+        productNameCategoryGenerator()
+        order_id()
+        customer_id()
+        emailg()
+        payment_txn_id()
+        randomProductID()
+
+        println()
 
         /*while(true){
             var prnt = print()
@@ -73,12 +82,13 @@ object EcommerceProj {
             println("after")
 
             // println(qty + price + date)
-        def nameGenerator(): Unit = {
+        def nameGenerator(): String = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
             
             var randFirstNames = firstNames(nextInt(firstNames.length))
             var randlastNames = ""
+            var randName = ""
             
             
                 randFirstNames match {
@@ -122,16 +132,17 @@ object EcommerceProj {
                         println("default")
                     
                 }
-            println(randFirstNames + "," + randlastNames)
+            randName = randFirstNames + randlastNames
             
         }
 
-        def countryCityGenerator(): Unit = {
+        def countryCityGenerator(): String = {
             val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
             val cities = List("New York City", "Boston", "Los Angeles","Miami", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Birmingham", "London", "Liverpool","Manchester","Vancouver","Toronto","Ontario","British Columbia","Tokyo","Kyoto","Osaka","Yokohama","Seoul","Busan","Daegu","Gwangju", "Sao Paulo","Rio de Janeiro","Brasilia","Salvador","Bogota","Leticia","Barranquilla","Medellin")
 
             var randCountry = countries(nextInt(countries.length))
             var randCity = ""
+            var randCountryCity = ""
             
                 randCountry match {
                     case "USA" =>
@@ -153,17 +164,18 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            println(randCountry + "," + randCity)
+            randCountryCity = randCountry + "," + randCity
             
         }
 
 
-        def productNameCategoryGenerator(): Unit = {
+        def productNameCategoryGenerator(): String = {
             val categories = List("Stationery", "Electronics","Books","Clothing","Music")
             val names = List("Pen","Pencil","Notepad","Markers","iPad","CellPhone", "TV","laptop","Harry Potter","A Game of Thrones", "The Da Vinci Code", "New Moon", "Yeezy", "Gucci", "Yves Saint Laurent", "Hermes", "ANTI", "YEEZUS", "Certified Lover Boy", "Happier Than Ever")
 
             var randProdCat = categories(nextInt(categories.length))
             var randProdName = ""
+            var randProdCatName = ""
             
                 randProdCat match {
                     case "Stationery" =>
@@ -179,7 +191,7 @@ object EcommerceProj {
                     case _ =>
                         println("default")
                 }
-            println(randProdCat + "," + randProdName)
+            randProdCatName = randProdCat + "," + randProdName
         }
         
         
@@ -330,7 +342,7 @@ object EcommerceProj {
                 var price = r.nextInt(10000)
                 var date = random(from1, to1)+"  "+ fi(1)
 
-                println(qty,price,date)
+                println(qty,price,date,ProductID)
                 
 
 
