@@ -62,10 +62,11 @@ object EcommerceProj {
         var randOrderId = 0
         var aa = 0
         
+        
         //var randomnm = randomTime()
         
         
-     
+        
         //println(a)
         //var hh = new ja(qty,price,Date.toString)
 
@@ -356,7 +357,7 @@ object EcommerceProj {
             var f = random1(from, to)
             var g = f.toString
             var fi = g.split("T")
-            var Date = random(from1, to1)+"  "+ fi(1)
+            var Date = random(from1, to1)+" "+ fi(1)
             //println(Date)
 
             //var exp = randomProductID()
@@ -368,10 +369,12 @@ object EcommerceProj {
 
         }
         
-        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + ","
+        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + randomQty() + "," + randomPrice() + "," + randomTime()
                 
-                println(allData)
-                println(randomQty() + " qty " + randomPrice() + " price " + randomTime() + " time ")
+        println(allData)
+        
+        
+                // println(randomQty() + " qty " + randomPrice() + " price " + randomTime() + " time ")
 
         
     }
