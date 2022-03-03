@@ -49,19 +49,20 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
-        var res2 = 0
+        var randOrderId = 0
         var aa=0
         // randomTime()
-        nameGenerator()
-        countryCityGenerator()
-        productNameCategoryGenerator()
-        order_id()
-        customer_id()
-        emailg()
-        payment_txn_id()
-        randomProductID()
+        // nameGenerator()
+        // countryCityGenerator()
+        // productNameCategoryGenerator()
+        // order_id()
+        // customer_id()
+        // emailg()
+        // payment_txn_id()
+        // randomProductID()
 
-        println()
+        // println(nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() )
+        //  + "," + randCountryCity + "," + randProdCatName + "," + randOrderId + "," + randCustomerId + "," + randEmail + "," + randTxnId + "," + randProdId)
 
         /*while(true){
             var prnt = print()
@@ -77,12 +78,12 @@ object EcommerceProj {
             //println(Date)
 
             //var exp = randomProductID()
-            println("before ja class")
+            // println("before ja class")
             // println(qty,price,date.toString)
-            println("after")
+            // println("after")
 
             // println(qty + price + date)
-        def nameGenerator(): String = {
+        def nameGen(): String = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
             
@@ -120,7 +121,7 @@ object EcommerceProj {
                         randlastNames = lastNames(nextInt(4)+8)
                     case "Daulton" =>
                         randlastNames = lastNames(nextInt(4)+12)
-                    case "Aububacar" =>
+                    case "Abubacarr" =>
                         randlastNames = lastNames(nextInt(4)+16)
                     case "Giancarlos" =>
                         randlastNames = lastNames(nextInt(4)+18)
@@ -132,11 +133,11 @@ object EcommerceProj {
                         println("default")
                     
                 }
-            randName = randFirstNames + randlastNames
-            
+            randName = randFirstNames + " " + randlastNames
+            return randName
         }
 
-        def countryCityGenerator(): String = {
+        def countryCityGen(): String = {
             val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
             val cities = List("New York City", "Boston", "Los Angeles","Miami", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Birmingham", "London", "Liverpool","Manchester","Vancouver","Toronto","Ontario","British Columbia","Tokyo","Kyoto","Osaka","Yokohama","Seoul","Busan","Daegu","Gwangju", "Sao Paulo","Rio de Janeiro","Brasilia","Salvador","Bogota","Leticia","Barranquilla","Medellin")
 
@@ -165,11 +166,12 @@ object EcommerceProj {
                         println("default")
                 }
             randCountryCity = randCountry + "," + randCity
+            return randCountryCity
             
         }
 
 
-        def productNameCategoryGenerator(): String = {
+        def productNameCategoryGen(): String = {
             val categories = List("Stationery", "Electronics","Books","Clothing","Music")
             val names = List("Pen","Pencil","Notepad","Markers","iPad","CellPhone", "TV","laptop","Harry Potter","A Game of Thrones", "The Da Vinci Code", "New Moon", "Yeezy", "Gucci", "Yves Saint Laurent", "Hermes", "ANTI", "YEEZUS", "Certified Lover Boy", "Happier Than Ever")
 
@@ -192,20 +194,21 @@ object EcommerceProj {
                         println("default")
                 }
             randProdCatName = randProdCat + "," + randProdName
+            return randProdCatName
         }
         
         
-        def order_id: BigInt = {
+        def order_id(): BigInt = {
         // val res2 = randomUUID().toString
-            res2 += 1
+            randOrderId += 1
 
-            return res2
+            return randOrderId
         }
         
-        def customer_id: String = {
-            val res2 = randomUUID().toString
+        def customer_id(): String = {
+            val randCustomerId = randomUUID().toString
 
-            return res2
+            return randCustomerId
         }
 
         /*while(true){
@@ -225,15 +228,15 @@ object EcommerceProj {
 
             var ran = new scala.util.Random
 
-            var x = emails(ran.nextInt(emails.size))
-            return x;
+            var randEmail = emails(ran.nextInt(emails.size))
+            return randEmail;
         }  
 
         
         def payment_txn_id(): Int ={
 
             var i = 0
-            var randomID=nextInt(9999)
+            var randTxnId=nextInt(9999)
             /*while(true){ 
                 
                 randomID=nextInt(9999)
@@ -247,14 +250,14 @@ object EcommerceProj {
             }  
             */
 
-            return randomID
+            return randTxnId
         }
 
         def randomProductID(): Int = {
             //var scanner = new Scanner(System.in)
 
             val r = new scala.util.Random
-            var productID = nextInt(100000)
+            var randProdId = nextInt(100000)
             
             /*while (true){           
                 productID = r.nextInt(1000000)
@@ -266,7 +269,7 @@ object EcommerceProj {
                     // return productID
             }
             */
-            return productID
+            return randProdId
         }
 
         // def randomTime(): Array[Any] = {
@@ -342,8 +345,9 @@ object EcommerceProj {
                 var price = r.nextInt(10000)
                 var date = random(from1, to1)+"  "+ fi(1)
 
-                println(qty,price,date,ProductID)
+                var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + qty + "," + price + "," + date
                 
+                println(allData)
 
 
 
