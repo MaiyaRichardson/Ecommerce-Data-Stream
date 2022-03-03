@@ -6,7 +6,7 @@ import au.com.bytecode.opencsv.CSVWriter
 import au.com.bytecode.opencsv.CSVReader
 import java.io.FileReader
 
-class ja(qty:Int,price:Int,Date:String) {
+class ja(nameGenerator:Unit, qty:Int,price:Int,Date:String) {
     var fw = new FileWriter("ecommerceData1.csv",true);
     val outputFile = new BufferedWriter(fw) //replace the path with the desired path and filename with the desired filename
 
