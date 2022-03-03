@@ -114,8 +114,6 @@ object EcommerceProj {
             val countries = List("USA", "India","UK","Canada","Japan","Korea","Brazil","Colombia")
             val cities = List("New York City", "Boston", "Los Angeles","Miami", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Birmingham", "London", "Liverpool","Manchester","Vancouver","Toronto","Ontario","British Columbia","Tokyo","Kyoto","Osaka","Yokohama","Seoul","Busan","Daegu","Gwangju", "Sao Paulo","Rio de Janeiro","Brasilia","Salvador","Bogota","Leticia","Barranquilla","Medellin")
 
-            var res2 = 0
-
             var randCountry = countries(nextInt(countries.length))
             var randCity = ""
             
