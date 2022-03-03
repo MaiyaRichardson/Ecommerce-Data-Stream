@@ -7,12 +7,18 @@ import java.math.BigInteger
 import scala.util.matching.Regex
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit.{DAYS,MINUTES}
-import java.util.Random
 import java.time.LocalDate
 import scala.io._
 import java.io.File
 import java.util.UUID.randomUUID
-
+import java.io.{BufferedWriter, FileWriter}
+import scala.collection.JavaConversions._
+import scala.collection.mutable.ListBuffer
+import scala.util.Random
+import au.com.bytecode.opencsv.CSVWriter
+import au.com.bytecode.opencsv.CSVReader
+import java.io.FileReader
+import _root_.javax.xml.crypto.Data
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
         /*val spark = SparkSession
@@ -49,20 +55,47 @@ object EcommerceProj {
     }
 
     def randomGenerator(): Unit = {
+        val rdm = new scala.util.Random
+        var res2 = 0
+        var rdmTxn = 1
+        var rdmPID = 2
         var randOrderId = 0
-        var aa=0
-        // randomTime()
-        // nameGenerator()
-        // countryCityGenerator()
-        // productNameCategoryGenerator()
-        // order_id()
-        // customer_id()
-        // emailg()
-        // payment_txn_id()
-        // randomProductID()
+        var aa = 0
+        
+        //var randomnm = randomTime()
+        
+        
+     
+        //println(a)
+        //var hh = new ja(qty,price,Date.toString)
 
-        // println(nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() )
-        //  + "," + randCountryCity + "," + randProdCatName + "," + randOrderId + "," + randCustomerId + "," + randEmail + "," + randTxnId + "," + randProdId)
+        /*var fw = new FileWriter("ecommerceData1.csv",true);
+        val outputFile = new BufferedWriter(fw) //replace the path with the desired path and filename with the desired filename
+
+        var rw = new FileReader("ecommerceData1.csv");
+
+        //val csvWriter = new CSVWriter(fw)
+        val reader = new CSVReader(rw)
+        var csvLines = reader.readAll()
+        var fd = csvLines.get(csvLines.size-1)
+        println(fd(0))
+        var id = (fd(0).toInt+1)
+        //val csvFields = Array("id", "qty", "prices", "DateTime")
+        //val csvFields1 = List(id, qty, price)
+        // val nameList = List(“Deepak”, “Sangeeta”, “Geetika”, “Anubhav”, “Sahil”, “Akshay”)
+        // val ageList = (24 to 26).toList
+        // val cityList = List(“Delhi”, “Kolkata”, “Chennai”, “Mumbai”)
+        // val random = new Random()
+        var listOfRecords = new ListBuffer[Array[String]]()
+        var listOfRecords1 = new ListBuffer[Array[String]]()
+        //listOfRecords += csvFields
+        //listOfRecords1 += csvFields1
+        //println(anyName())
+        
+        //csvWriter.writeAll(listOfRecords.toList)
+        //csvWriter.writeAll(List(Array(randomTime, res2, id.toString, qty.toString, price.toString,Date)))
+        outputFile.close()
+        */
 
         /*while(true){
             var prnt = print()
@@ -233,10 +266,12 @@ object EcommerceProj {
         }  
 
         
-        def payment_txn_id(): Int ={
+        def payment_txn_id(): BigInt ={
+            rdmTxn += 1
 
-            var i = 0
-            var randTxnId=nextInt(9999)
+            return rdmTxn
+            //var i = 0
+            //var randomID=nextInt(9999)
             /*while(true){ 
                 
                 randomID=nextInt(9999)
@@ -250,14 +285,16 @@ object EcommerceProj {
             }  
             */
 
-            return randTxnId
+            //return randomID
         }
 
-        def randomProductID(): Int = {
+        def randomProductID(): BigInt = {
+            rdmPID += 1
+            return rdmPID
             //var scanner = new Scanner(System.in)
 
-            val r = new scala.util.Random
-            var randProdId = nextInt(100000)
+            //val r = new scala.util.Random
+            //var productID = nextInt(100000)
             
             /*while (true){           
                 productID = r.nextInt(1000000)
@@ -269,93 +306,72 @@ object EcommerceProj {
                     // return productID
             }
             */
-            return randProdId
+            //return productID
         }
-
-        // def randomTime(): Array[Any] = {
-        //     val from = LocalDateTime.of(2000, 1, 1,12,45,34)
-
-        //     val to = LocalDateTime.of(2015, 1, 1,12,55,55)
-
-        //     val from1 = LocalDate.of(2000,1,1)
-        //     val to1 = LocalDate.of(2022,2,1)
-                
-        //     // connect to the database named "mysql" on port 8889 of localhost
-        //     aa +=1
-        //     val r = new scala.util.Random
-        //     println()
-    
             
-        //     println()
-        //     var f = random1(from, to)
-        //     var g = f.toString
-        //     var fi = g.split("T")
-            
-        //     var qty = r.nextInt(50)
-        //     var price = r.nextInt(10000)
-        //     var date = random(from1, to1)+"  "+ fi(1)
-        //     //println(Date)
-
-        //     //var exp = randomProductID()
-        //     println("before ja class")
-        //     println(qty,price,date.toString)
-        //     println("after")
-        //     // println(hh)
-        //     var qPD = Array(qty,price,date)
-        //     return qPD
-        // }
-
         def random(from1: LocalDate, to1: LocalDate): LocalDate= {
-            val diff = DAYS.between(from1, to1)
-        
-            // val di = diff.split("T")
-            val random = new Random(System.nanoTime) // You may want a different seed
+                val diff = DAYS.between(from1, to1)
             
-            from1.plusDays(random.nextInt(diff.toInt))
+                // val di = diff.split("T")
+                val random = new Random(System.nanoTime) // You may want a different seed
+                
+                from1.plusDays(random.nextInt(diff.toInt))
         }
         
         def random1(from: LocalDateTime, to: LocalDateTime): LocalDateTime = {
-            val diff = DAYS.between(from, to)
-            //println(diff)
-            // val di = diff.split("T")
-            val random = new Random(System.nanoTime) // You may want a different seed
-            
-            from.plusMinutes(random.nextInt(diff.toInt))
+                val diff = DAYS.between(from, to)
+                //println(diff)
+                // val di = diff.split("T")
+                val random = new Random(System.nanoTime) // You may want a different seed
+                
+                from.plusMinutes(random.nextInt(diff.toInt))
         }
 
+        def randomQty(): Int = {
+            val rqty = rdm
+            var qty = rqty.nextInt(50)
+
+            return qty
+        }
+
+        def randomPrice(): Int = {
+            val rprc = rdm
+            var price = rprc.nextInt(10000)
+
+            return price
+        }
+
+        
+        def randomTime(): String = {
             val from = LocalDateTime.of(2000, 1, 1,12,45,34)
 
-                val to = LocalDateTime.of(2015, 1, 1,12,55,55)
+            val to = LocalDateTime.of(2015, 1, 1,12,55,55)
 
-                val from1 = LocalDate.of(2000,1,1)
-                val to1 = LocalDate.of(2022,2,1)
-                    
-                // connect to the database named "mysql" on port 8889 of localhost
-                aa +=1
-                val r = new scala.util.Random
-                println()
-        
-                // var e = random1(from, t)
-                println()
-                var f = random1(from, to)
-                var g = f.toString
-                var fi = g.split("T")
+            val from1 = LocalDate.of(2000,1,1)
+            val to1 = LocalDate.of(2022,2,1)
                 
-                var qty = r.nextInt(50)
-                var price = r.nextInt(10000)
-                var date = random(from1, to1)+"  "+ fi(1)
+            // connect to the database named "mysql" on port 8889 of localhost
+            aa +=1
+            
+            var f = random1(from, to)
+            var g = f.toString
+            var fi = g.split("T")
+            var Date = random(from1, to1)+"  "+ fi(1)
+            //println(Date)
 
-                var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + qty + "," + price + "," + date
+            //var exp = randomProductID()
+            //var hh = new ja(qty,price,Date.toString)
+
+            //var idGen = Array(Date.toString)
+            return Date
+            
+
+        }
+        
+        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + ","
                 
                 println(allData)
-
-
-
-
-
-        
-
-        
+                println(randomQty() + " qty " + randomPrice() + " price " + randomTime() + " time ")
 
         
     }
