@@ -234,7 +234,10 @@ object EcommerceProj {
         
         def order_id(): BigInt = {
         // val res2 = randomUUID().toString
-            randOrderId += 1
+            if(randOrderId >= 0){
+                randOrderId += 1  
+            }
+           
 
             return randOrderId
         }
@@ -265,6 +268,15 @@ object EcommerceProj {
             var randEmail = emails(ran.nextInt(emails.size))
             return randEmail;
         }  
+
+        def paymentType(): String = {
+            var payments = List("card", "Internet Banking", "UPI", "Wallet")
+
+            var ran = rdm
+
+            var randPayment = payments(ran.nextInt(payments.size))
+            return randPayment;
+        }
 
         
         def payment_txn_id(): BigInt ={
@@ -369,7 +381,7 @@ object EcommerceProj {
 
         }
         
-        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + randomQty() + "," + randomPrice() + "," + randomTime()
+        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + paymentType()
                 
         println(allData)
         
