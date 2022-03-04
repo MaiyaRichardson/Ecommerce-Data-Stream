@@ -3,9 +3,9 @@ import org.apache.spark.sql.DataFrame
 import org.apache.spark.SparkConf
 import scala.util.Random.nextInt
 import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec.P
-<<<<<<< HEAD:src/main/scala/websites.scala
+
 import scala.util.Random.nextInt
-=======
+
 import java.math.BigInteger
 import scala.util.matching.Regex
 import java.time.LocalDateTime
@@ -15,19 +15,19 @@ import java.time.LocalDate
 import scala.io._
 import java.io.File
 import java.util.UUID.randomUUID
->>>>>>> origin/gianca:src/main/scala/Ecommerce.scala
+
 
 object websites {
     def main(args:Array[String]): Unit = {
-        /*val spark = SparkSession
+        val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
-        val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
-        val df = rdd.toDF("Customer_Name", "age")
+        //val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
+        //val df = rdd.toDF("Customer_Name", "age")
         df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
             .write
             .format("kafka")
@@ -42,7 +42,7 @@ object websites {
         //var website
         //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
         df.write.csv("s3://my-bucket/dummy-data/")
-        */
+        
         
         while(true){
             randomGenerator() 
@@ -53,7 +53,7 @@ object websites {
     }
 
     def randomGenerator(): Unit = {
-<<<<<<< HEAD:src/main/scala/websites.scala
+ 
     
     def emailg(): String = {
     var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
@@ -68,7 +68,7 @@ object websites {
 
 
     
-=======
+
         var randOrderId = 0
         var aa=0
         // randomTime()
@@ -379,7 +379,7 @@ object websites {
 
         
     }
->>>>>>> origin/gianca:src/main/scala/Ecommerce.scala
+
 
     
 }
