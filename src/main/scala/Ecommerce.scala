@@ -83,51 +83,6 @@ object EcommerceProj {
                 }
     }
 
-<<<<<<< HEAD
-    def randomGenerator(): Unit = {
-        val rdm = new scala.util.Random
-        var res2 = 0
-        var rdmTxn = 1
-        var rdmPID = 2
-        var randOrderId = 0
-        var aa = 0
-        
-        
-        //var randomnm = randomTime()
-        
-        
-        
-        //println(a)
-        //var hh = new ja(qty,price,Date.toString)
-
-        /*var fw = new FileWriter("ecommerceData1.csv",true);
-        val outputFile = new BufferedWriter(fw) //replace the path with the desired path and filename with the desired filename
-
-        var rw = new FileReader("ecommerceData1.csv");
-
-        //val csvWriter = new CSVWriter(fw)
-        val reader = new CSVReader(rw)
-        var csvLines = reader.readAll()
-        var fd = csvLines.get(csvLines.size-1)
-        println(fd(0))
-        var id = (fd(0).toInt+1)
-        //val csvFields = Array("id", "qty", "prices", "DateTime")
-        //val csvFields1 = List(id, qty, price)
-        // val nameList = List(“Deepak”, “Sangeeta”, “Geetika”, “Anubhav”, “Sahil”, “Akshay”)
-        // val ageList = (24 to 26).toList
-        // val cityList = List(“Delhi”, “Kolkata”, “Chennai”, “Mumbai”)
-        // val random = new Random()
-        var listOfRecords = new ListBuffer[Array[String]]()
-        var listOfRecords1 = new ListBuffer[Array[String]]()
-        //listOfRecords += csvFields
-        //listOfRecords1 += csvFields1
-        //println(anyName())
-        
-        //csvWriter.writeAll(listOfRecords.toList)
-        //csvWriter.writeAll(List(Array(randomTime, res2, id.toString, qty.toString, price.toString,Date)))
-        outputFile.close()
-        */
-=======
 
 
     // def badDataGen(): Unit = {
@@ -151,7 +106,6 @@ object EcommerceProj {
         // }
         // println(nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() )
         //  + "," + randCountryCity + "," + randProdCatName + "," + randOrderId + "," + randCustomerId + "," + randEmail + "," + randTxnId + "," + randProdId)
->>>>>>> gianca
 
         /*while(true){
             var prnt = print()
@@ -359,15 +313,9 @@ object EcommerceProj {
             rdmPID += 1
             return rdmPID
             //var scanner = new Scanner(System.in)
-<<<<<<< HEAD
-
-            //val r = new scala.util.Random
-            //var productID = nextInt(100000)
-=======
             
             val r = new scala.util.Random
             var randProdId = nextInt(100000)
->>>>>>> gianca
             
             /*while (true){           
                 productID = r.nextInt(1000000)
@@ -381,12 +329,6 @@ object EcommerceProj {
                 */
                 return randProdId
             }
-<<<<<<< HEAD
-            */
-            //return productID
-        }
-            
-=======
             
             def randTxnSF(): String = {
                 //payment txn success
@@ -437,7 +379,6 @@ object EcommerceProj {
         //     from.plusMinutes(random.nextInt(diff.toInt))
         // }
 
->>>>>>> gianca
         def random(from1: LocalDate, to1: LocalDate): LocalDate= {
                 val diff = DAYS.between(from1, to1)
             
@@ -457,20 +398,6 @@ object EcommerceProj {
         }
 
         def randomQty(): Int = {
-<<<<<<< HEAD
-            val rqty = rdm
-            var qty = rqty.nextInt(50)
-
-            return qty
-        }
-
-        def randomPrice(): Int = {
-            val rprc = rdm
-            var price = rprc.nextInt(10000)
-
-            return price
-        }
-=======
             // val rqty = rdm
             var qty = nextInt(50)
 
@@ -537,15 +464,11 @@ object EcommerceProj {
                 
                 var randData = ""
                 var allData = customer_id() + "," + nameGen()  + "," + randomProductID() + "," + productNameCategoryGen() + "," + paymentType() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + countryCityGen() + "," +  websiteName() + "," + payment_txn_id() + "," + randTxnSF
->>>>>>> gianca
 
         
         def randomTime(): String = {
             val from = LocalDateTime.of(2000, 1, 1,12,45,34)
 
-<<<<<<< HEAD
-            val to = LocalDateTime.of(2015, 1, 1,12,55,55)
-=======
                 
 
                 // println(allData)
@@ -556,7 +479,6 @@ object EcommerceProj {
                 // println(allData)
 //currently have 13
 //payment type
->>>>>>> gianca
 
             val from1 = LocalDate.of(2000,1,1)
             val to1 = LocalDate.of(2022,2,1)
