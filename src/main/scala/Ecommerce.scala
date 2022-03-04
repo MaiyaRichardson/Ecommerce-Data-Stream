@@ -7,18 +7,12 @@ import java.math.BigInteger
 import scala.util.matching.Regex
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit.{DAYS,MINUTES}
+import java.util.Random
 import java.time.LocalDate
 import scala.io._
 import java.io.File
 import java.util.UUID.randomUUID
-import java.io.{BufferedWriter, FileWriter}
-import scala.collection.JavaConversions._
-import scala.collection.mutable.ListBuffer
-import scala.util.Random
-import au.com.bytecode.opencsv.CSVWriter
-import au.com.bytecode.opencsv.CSVReader
-import java.io.FileReader
-import _root_.javax.xml.crypto.Data
+
 object EcommerceProj {
     def main(args:Array[String]): Unit = {
         /*val spark = SparkSession
@@ -243,10 +237,7 @@ object EcommerceProj {
         
         def order_id(): BigInt = {
         // val res2 = randomUUID().toString
-            if(randOrderId >= 0){
-                randOrderId += 1  
-            }
-           
+            randOrderId += 1
 
             return randOrderId
         }
@@ -277,22 +268,11 @@ object EcommerceProj {
             return randEmail;
         }  
 
-        def paymentType(): String = {
-            var payments = List("card", "Internet Banking", "UPI", "Wallet")
-
-            var ran = rdm
-
-            var randPayment = payments(ran.nextInt(payments.size))
-            return randPayment;
-        }
-
         
-        def payment_txn_id(): BigInt ={
-            rdmTxn += 1
+        def payment_txn_id(): Int ={
 
-            return rdmTxn
-            //var i = 0
-            //var randomID=nextInt(9999)
+            var i = 0
+            var randTxnId=nextInt(9999)
             /*while(true){ 
                 
                 randomID=nextInt(9999)
@@ -306,12 +286,10 @@ object EcommerceProj {
             }  
             */
 
-            //return randomID
+            return randTxnId
         }
 
-        def randomProductID(): BigInt = {
-            rdmPID += 1
-            return rdmPID
+        def randomProductID(): Int = {
             //var scanner = new Scanner(System.in)
             
             val r = new scala.util.Random
@@ -465,9 +443,6 @@ object EcommerceProj {
                 var randData = ""
                 var allData = customer_id() + "," + nameGen()  + "," + randomProductID() + "," + productNameCategoryGen() + "," + paymentType() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + countryCityGen() + "," +  websiteName() + "," + payment_txn_id() + "," + randTxnSF
 
-        
-        def randomTime(): String = {
-            val from = LocalDateTime.of(2000, 1, 1,12,45,34)
 
                 
 
@@ -480,33 +455,11 @@ object EcommerceProj {
 //currently have 13
 //payment type
 
-            val from1 = LocalDate.of(2000,1,1)
-            val to1 = LocalDate.of(2022,2,1)
-                
-            // connect to the database named "mysql" on port 8889 of localhost
-            aa +=1
-            
-            var f = random1(from, to)
-            var g = f.toString
-            var fi = g.split("T")
-            var Date = random(from1, to1)+" "+ fi(1)
-            //println(Date)
 
-            //var exp = randomProductID()
-            //var hh = new ja(qty,price,Date.toString)
 
-            //var idGen = Array(Date.toString)
-            return Date
-            
+        
 
-        }
         
-        var allData = nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + paymentType()
-                
-        println(allData)
-        
-        
-                // println(randomQty() + " qty " + randomPrice() + " price " + randomTime() + " time ")
 
         
     }
