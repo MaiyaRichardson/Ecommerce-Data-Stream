@@ -12,17 +12,44 @@ import java.time.LocalDate
 import scala.io._
 import java.io.File
 import java.util.UUID.randomUUID
+import java.util.Properties
+import org.apache.kafka.clients.producer._
+
+
 
 object EcommerceProj {
+
+    def empt1(): String = {
+            var emp1 = ",,,,,,,,,,,,,,,"
+
+            return emp1
+    }
+
+    def countMet(): Any = {
+            var randCount = 1    
+            while(true){
+                    // order_id()
+                if (randCount % 20 == 0) {
+                    println(empt1() + randomGenerator())
+                    
+                }
+                else {
+                    print(randomGenerator())
+                }        
+                Thread.sleep(500)
+                randCount += 1
+            }
+        }
     def main(args:Array[String]): Unit = {
-        /*val spark = SparkSession
+        writeToKafka("Quick-start")
+        val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
-        val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
+        /*val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
         val df = rdd.toDF("Customer_Name", "age")
         df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
             .write
@@ -45,44 +72,49 @@ object EcommerceProj {
         // order +=1
         // }
         // println(randTxnSF)
-        //val csvFields1 = List(id, qty, price)
-        // def writeToKafka(topic: String): Unit = {
-//     val props = new Properties()
-//     props.put("bootstrap.servers", "localhost:9094")
-//     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-//     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-//     val producer = new KafkaProducer[String, String](props)
-//     val record = new ProducerRecord[String, String](topic, randCount, randomGenerator())
-//     while (true){
-//         if () {
-//             producer.send(",,,,,,,,,,,,")
-//         }
-//         else producer.send(record)
-//     }
-//     // producer.send(record)
-//     producer.close()
-// }
-
-        var randCount = 1
-            while(true){
-                    // order_id()
-                if (randCount % 20 == 0) {
-                    println(",,,,,,,,,,,,,,,")
-                    }
-                else {
-                    println(randCount + "," + randomGenerator)
-                    }        
-                Thread.sleep(500)
-                randCount += 1
-                }
+        //val csvFields1 = List(id, qty, price)        
+        
+        
     }
 
 
+    def writeToKafka(topic: String): Unit = {
+                
+        val props = new Properties()
+        props.put("bootstrap.servers", "localhost:9094")
+        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+        val producer = new KafkaProducer[Any, String](props)
+        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
+                
+                
+                /*var randCount = 1    
+                    while(true){
+                            // order_id()
+                        if (randCount % 20 == 0) {
+                            producer.send(record)
+                        }
+                        else {
+                            producer.send(record)
+                        }        
+                        Thread.sleep(500)
+                        randCount += 1
+                        }
+                
+                */
+                
+            
+        producer.send(record)
+        producer.close()
+    }
 
-    // def badDataGen(): Unit = {
+        println(empt1)
 
-    // }
+    
+
     def randomGenerator(): String = {
+       
+
         var aa=0
         var randOrderId = 0
         // randomTime()
@@ -246,17 +278,6 @@ object EcommerceProj {
             val randCustomerId = randomUUID().toString
             return randCustomerId
         }
-
-        /*while(true){
-            // order id
-            println(order_id + ", " + customer_id)
-            // customer id
-            // println(customer_id)
-            Thread.sleep(2000)
-        }
-        */
-        
-            //println(emailg)
         
         def websiteName(): String = {
             var emails = List("www.jacobblack.com", "www.jekh@gmail.com", "www.weloveapples.com", "www.amazon.com", "www.amazon.com",
@@ -273,59 +294,36 @@ object EcommerceProj {
 
             var i = 0
             var randTxnId=nextInt(9999)
-            /*while(true){ 
-                
-                randomID=nextInt(9999)
-                if(randomID < 1000){
-                    randomID+=1000 
-                    println("added 0ne thousand")  
-                }
-            //println(s"^\\d{4}" + randomID)
-            print(randomID +",")
-            Thread.sleep(2000) // wait for 2000 millisecond
-            }  
-            */
 
             return randTxnId
         }
 
         def randomProductID(): Int = {
-            //var scanner = new Scanner(System.in)
-            
+    
             val r = new scala.util.Random
             var randProdId = nextInt(100000)
             
-            /*while (true){           
-                productID = r.nextInt(1000000)
-                
-                
-                //println("Product ID:" + productID)  
-                //for(i<-0 to 100 by 1){
-                    //  println("ProductID:" + r.nextInt(1000000000))
-                    // return productID
-                }
-                */
-                return randProdId
-            }
+            return randProdId
+        }
             
-            def randTxnSF(): String = {
-                //payment txn success
-                //failure reason
-                // val txnSuccess = List("Y","N")
-                val failReasons = List ("Invalid CVV","Insufficient Balance","Incorrect Billing Address","Invalid Name")
-                var randTxn = nextInt(4)
-                var txnSuccess = ""
-                var txnSF = ""
-                randTxn match {
-                    case 0 => txnSuccess = "N"
-                    case 1 | 2 | 3 => txnSuccess = "Y"
-                }
-                if (txnSuccess == "Y"){
-                    txnSF = txnSuccess + ","
-                } else {
-                    txnSF = txnSuccess + "," + failReasons(nextInt(4))
-                }
-                return txnSF
+        def randTxnSF(): String = {
+            //payment txn success
+            //failure reason
+            // val txnSuccess = List("Y","N")
+            val failReasons = List ("Invalid CVV","Insufficient Balance","Incorrect Billing Address","Invalid Name")
+            var randTxn = nextInt(4)
+            var txnSuccess = ""
+            var txnSF = ""
+            randTxn match {
+                case 0 => txnSuccess = "N"
+                case 1 | 2 | 3 => txnSuccess = "Y"
+            }
+            if (txnSuccess == "Y"){
+                txnSF = txnSuccess + ","
+            } else {
+                txnSF = txnSuccess + "," + failReasons(nextInt(4))
+            }
+            return txnSF
                 
         }
 
@@ -338,24 +336,6 @@ object EcommerceProj {
             return randPayment;
         }
 
-
-        // def random(from1: LocalDate, to1: LocalDate): LocalDate= {
-        //     val diff = DAYS.between(from1, to1)
-        
-        //     // val di = diff.split("T")
-        //     val random = new Random(System.nanoTime) // You may want a different seed
-            
-        //     from1.plusDays(random.nextInt(diff.toInt))
-        // }
-        
-        // def random1(from: LocalDateTime, to: LocalDateTime): LocalDateTime = {
-        //     val diff = DAYS.between(from, to)
-        //     //println(diff)
-        //     // val di = diff.split("T")
-        //     val random = new Random(System.nanoTime) // You may want a different seed
-            
-        //     from.plusMinutes(random.nextInt(diff.toInt))
-        // }
 
         def random(from1: LocalDate, to1: LocalDate): LocalDate= {
                 val diff = DAYS.between(from1, to1)
@@ -397,57 +377,25 @@ object EcommerceProj {
             val from1 = LocalDate.of(2000,1,1)
             val to1 = LocalDate.of(2022,2,1)
                 
-            // connect to the database named "mysql" on port 8889 of localhost
             aa +=1
             
             var f = random1(from, to)
             var g = f.toString
             var fi = g.split("T")
             var Date = random(from1, to1)+" "+ fi(1)
-            //println(Date)
-
-            //var exp = randomProductID()
-            //var hh = new ja(qty,price,Date.toString)
-
-            //var idGen = Array(Date.toString)
+            
             return Date
             
 
         }
 
-            // val from = LocalDateTime.of(2000, 1, 1,12,45,34)
-
-            //     val to = LocalDateTime.of(2015, 1, 1,12,55,55)
-
-            //     val from1 = LocalDate.of(2000,1,1)
-            //     val to1 = LocalDate.of(2022,2,1)
-                    
-            //     // connect to the database named "mysql" on port 8889 of localhost
-            //     aa +=1
-            //     val r = new scala.util.Random
-            //     println()
-        
-            //     // var e = random1(from, t)
-            //     println()
                 
-                
-                
-
-                    // var f = random1(from, to)
-                    // var g = f.toString
-                    // var fi = g.split("T")
-                    // var qty = r.nextInt(50)
-                    // var price = r.nextInt(10000)
-                    // var date = random(from1, to1)+"  "+ fi(1)
-                
-                var randData = ""
-                var allData = customer_id() + "," + nameGen()  + "," + randomProductID() + "," + productNameCategoryGen() + "," + paymentType() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + countryCityGen() + "," +  websiteName() + "," + payment_txn_id() + "," + randTxnSF
+            var randData = ""
+            var allData = customer_id() + "," + nameGen()  + "," + randomProductID() + "," + productNameCategoryGen() + "," + paymentType() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + countryCityGen() + "," +  websiteName() + "," + payment_txn_id() + "," + randTxnSF
 
 
-                
-
-                // println(allData)
-                return allData
+            // println(allData)
+            return allData
 
 
                 
