@@ -19,12 +19,14 @@ import org.apache.kafka.clients.producer._
 
 object EcommerceProj {
 
+    //this is the method to insert bad data
     def empt1(): String = {
             var emp1 = ",,,,,,,,,,,,,,,"
 
             return emp1
     }
 
+    //this is the method to insert bad data every 20 entries
     def countMet(): Any = {
             var randCount = 1    
             while(true){
@@ -40,8 +42,10 @@ object EcommerceProj {
                 randCount += 1
             }
         }
+    
+    //this is the main method
     def main(args:Array[String]): Unit = {
-        writeToKafka("Quick-start")
+        writeToKafka("Quick-start") // this calls the writeToKafka method
         val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
@@ -49,31 +53,6 @@ object EcommerceProj {
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
-        /*val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
-        val df = rdd.toDF("Customer_Name", "age")
-        df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
-            .write
-            .format("kafka")
-            .option("topic", "p3ecom")
-            .option("kafka.bootstrap.servers","localhost:9092")
-            .option("checkpointLocation", "/home/gabrielklein/week11/KafkaSparkIntegration")
-            .save()
-        spark.close()
-        def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
-        var name = "dsd"
-        var Id = "sdsd"
-        //var website
-        //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
-        df.write.csv("s3://my-bucket/dummy-data/")
-        */
-        // var randOrderId = 0
-        // while(true){
-        // println(randomGenerator())
-        // order +=1
-        // }
-        // println(randTxnSF)
-        //val csvFields1 = List(id, qty, price)        
-        
         
     }
 
@@ -84,24 +63,9 @@ object EcommerceProj {
         props.put("bootstrap.servers", "localhost:9094")
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+        //the producer is going to receive the record. it had datatypes for the methods we are inserting
         val producer = new KafkaProducer[Any, String](props)
         val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
-                
-                
-                /*var randCount = 1    
-                    while(true){
-                            // order_id()
-                        if (randCount % 20 == 0) {
-                            producer.send(record)
-                        }
-                        else {
-                            producer.send(record)
-                        }        
-                        Thread.sleep(500)
-                        randCount += 1
-                        }
-                
-                */
                 
             
         producer.send(record)
@@ -111,47 +75,12 @@ object EcommerceProj {
         println(empt1)
 
     
-
+    //contains all of our data generation methods
     def randomGenerator(): String = {
-       
 
         var aa=0
         var randOrderId = 0
-        // randomTime()
-        // nameGenerator()
-        // countryCityGenerator()
-        // productNameCategoryGenerator()
-        // order_id()
-        // customer_id()
-        // emailg()
-        // payment_txn_id()
-        // randomProductID()
-        // while (true){
-        //     println(paymentType())
-        //     Thread.sleep(2000)
-        // }
-        // println(nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() )
-        //  + "," + randCountryCity + "," + randProdCatName + "," + randOrderId + "," + randCustomerId + "," + randEmail + "," + randTxnId + "," + randProdId)
-
-        /*while(true){
-            var prnt = print()
-            nameGenerator()
-            
-            Thread.sleep(2000) // wait for 2 seconds
-        }
-        //nameGenerator()
-        //countryCityGenerator()
-        //productNameCategoryGenerator()
-        */
         
-            //println(Date)
-
-            //var exp = randomProductID()
-            // println("before ja class")
-            // println(qty,price,date.toString)
-            // println("after")
-
-            // println(qty + price + date)
         def nameGen(): String = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
@@ -268,7 +197,6 @@ object EcommerceProj {
         
         
         def order_id(): BigInt = {
-        // val res2 = randomUUID().toString
             randOrderId += 1
 
             return randOrderId
@@ -384,8 +312,7 @@ object EcommerceProj {
             var fi = g.split("T")
             var Date = random(from1, to1)+" "+ fi(1)
             
-            return Date
-            
+            return Date    
 
         }
 
@@ -398,18 +325,6 @@ object EcommerceProj {
             return allData
 
 
-                
-                // println(allData)
-//currently have 13
-//payment type
-
-
-
-        
-
-        
-
-        
     }
 
     
