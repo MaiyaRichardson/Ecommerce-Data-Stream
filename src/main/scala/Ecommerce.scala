@@ -77,10 +77,6 @@ object EcommerceProj {
     
     //contains all of our data generation methods
     def randomGenerator(): String = {
-<<<<<<< HEAD
-=======
-
->>>>>>> 5b6d65c64a268275278b866ad4738d5a255b7b4c
         var aa=0
         var randOrderId = 0
         
