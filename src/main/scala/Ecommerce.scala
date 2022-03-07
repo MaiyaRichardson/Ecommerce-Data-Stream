@@ -113,8 +113,6 @@ object EcommerceProj {
     
 
     def randomGenerator(): String = {
-    
-
         var aa=0
         var randOrderId = 0
         // randomTime()
