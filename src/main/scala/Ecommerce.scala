@@ -36,7 +36,7 @@ object EcommerceProj {
                 else {
                     print(randomGenerator())
                 }        
-                Thread.sleep(500)
+                Thread.sleep(2000)
                 randCount += 1
             }
         }
