@@ -34,7 +34,13 @@ project/plugins/project/
 ### Scala ###
 *.class
 *.log
-
+project/
+target/
+.bloop/
+.metals/
+.metals/metals.lock.db
+.metals/metals.h2.db
+.metals/metals.log
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 

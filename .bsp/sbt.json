@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"name":"sbt","version":"1.6.1","bspVersion":"2.0.0-M5","languages":["scala"],"argv":["C:\\Program Files\\Java\\jdk1.8.0_311\\jre/bin/java","-Xms100m","-Xmx100m","-classpath","C:\\Program Files (x86)\\sbt\\\\bin\\sbt-launch.jar","xsbt.boot.Boot","-bsp","--sbt-launch-jar=C:\\Program%20Files%20(x86)\\sbt\\\\bin\\sbt-launch.jar"]}
+=======
+{"name":"sbt","version":"1.6.1","bspVersion":"2.0.0-M5","languages":["scala"],"argv":["C:\\Program Files\\Java\\jdk1.8.0_321\\jre/bin/java","-Xms100m","-Xmx100m","-classpath","C:\\Program Files (x86)\\sbt\\\\bin\\sbt-launch.jar","xsbt.boot.Boot","-bsp","--sbt-launch-jar=C:\\Program%20Files%20(x86)\\sbt\\\\bin\\sbt-launch.jar"]}
+>>>>>>> 5b6d65c64a268275278b866ad4738d5a255b7b4c
