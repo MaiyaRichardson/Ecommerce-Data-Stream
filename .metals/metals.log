@@ -5020,3 +5020,37 @@ Mar 05, 2022 12:15:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFO: Unsupported notification method: $/setTrace
 2022.03.05 12:16:51 INFO  time: code lens generation in 1.49s
 2022.03.05 17:11:33 INFO  time: code lens generation in 1.43s
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:13:07 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+Mar 05, 2022 5:18:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 488
+2022.03.05 17:18:12 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:18:12 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 17:18:12 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+Mar 05, 2022 7:04:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 524
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.05 19:04:52 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:29 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:54 ERROR code navigation does not work for the file 'C:\Users\user\Desktop\Project-3\src\main\scala\Consumer.scala' because the SemanticDB file 'C:\Users\user\Desktop\Project-3\.bloop\project-3\bloop-bsp-clients-classes\classes-Metals-C7rt-KoLSqC4A4advMUrPQ==\META-INF\semanticdb\src\main\scala\Consumer.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2022.03.07 10:57:54 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:54 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:57:54 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:58:01 ERROR code navigation does not work for the file 'C:\Users\user\Desktop\Project-3\src\main\scala\Consumer.scala' because the SemanticDB file 'C:\Users\user\Desktop\Project-3\.bloop\project-3\bloop-bsp-clients-classes\classes-Metals-C7rt-KoLSqC4A4advMUrPQ==\META-INF\semanticdb\src\main\scala\Consumer.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2022.03.07 10:58:01 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:58:01 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:58:01 ERROR No project associated with Uri(file:/C:/Users/user/Desktop/Project-3/?id=project-3)
+2022.03.07 10:58:01 ERROR code navigation does not work for the file 'C:\Users\user\Desktop\Project-3\src\main\scala\Consumer.scala' because the SemanticDB file 'C:\Users\user\Desktop\Project-3\.bloop\project-3\bloop-bsp-clients-classes\classes-Metals-C7rt-KoLSqC4A4advMUrPQ==\META-INF\semanticdb\src\main\scala\Consumer.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
