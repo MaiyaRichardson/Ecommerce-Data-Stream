@@ -5063,3 +5063,39 @@ WARNING: Unmatched cancel notification for request id 524
 2022.03.07 09:30:07 WARN  no build target for: E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
 2022.03.07 09:30:10 INFO  no build target found for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala. Using presentation compiler with project's scala-library version: 3.1.0
 2022.03.07 09:30:10 INFO  running 'C:\Users\Work\.jabba\jdk\adopt@1.8.0-292\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -Dsbt.version=1.6.1 -jar C:\Users\Work\AppData\Local\Temp\metals1835749397612152019\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.03.07 09:30:12 INFO  time: code lens generation in 1.8s
+2022.03.07 09:30:12 INFO  time: code lens generation in 1.8s
+2022.03.07 09:30:12 INFO  [info] Updated file E:\Big-Data\Project-3\project\build.properties: set sbt.version to 1.6.1
+2022.03.07 09:30:12 INFO  [info] welcome to sbt 1.6.1 (AdoptOpenJDK Java 1.8.0_292)
+2022.03.07 09:30:13 WARN  no build target for: E:\Big-Data\Project-3\src\main\scala\Consumer.scala
+2022.03.07 09:30:14 INFO  [info] loading settings for project project-3-build-build from metals.sbt ...
+2022.03.07 09:30:15 WARN  no build target for: E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.07 09:30:14 INFO  [info] loading project definition from E:\Big-Data\Project-3\project\project
+2022.03.07 09:30:15 WARN  no build target for: E:\Big-Data\Project-3\src\main\scala\Consumer.scala
+2022.03.07 09:30:17 INFO  [info] loading settings for project project-3-build from metals.sbt ...
+2022.03.07 09:30:17 INFO  [info] loading project definition from E:\Big-Data\Project-3\project
+2022.03.07 09:30:19 INFO  [success] Generated .bloop\project-3-build.json
+2022.03.07 09:30:19 INFO  [success] Total time: 3 s, completed Mar 7, 2022 9:30:19 AM
+2022.03.07 09:30:20 INFO  [info] loading settings for project project-3 from build.sbt ...
+2022.03.07 09:30:20 INFO  [info] set current project to KafkaSparkIntegration (in build file:/E:/Big-Data/Project-3/)
+2022.03.07 09:30:26 INFO  [success] Generated .bloop\project-3.json
+2022.03.07 09:30:26 INFO  [success] Generated .bloop\project-3-test.json
+2022.03.07 09:30:26 INFO  [success] Total time: 5 s, completed Mar 7, 2022 9:30:26 AM
+2022.03.07 09:30:26 INFO  time: ran 'sbt bloopInstall' in 15s
+2022.03.07 09:30:26 INFO  Attempting to connect to the build server...
+2022.03.07 09:30:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.07 09:30:33 INFO  Attempting to connect to the build server...
+2022.03.07 09:30:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.07 09:30:33 INFO  time: Connected to build server in 7.03s
+2022.03.07 09:30:33 INFO  Connected to Build server: Bloop v1.4.12
+2022.03.07 09:30:33 INFO  time: Imported build in 0.12s
+2022.03.07 09:30:43 INFO  time: indexed workspace in 9.45s
+2022.03.07 09:31:03 INFO  compiling project-3 (4 scala sources)
+2022.03.07 09:31:05 INFO  time: compiled project-3 in 2.03s
+2022.03.07 09:31:09 INFO  compiling project-3 (4 scala sources)
+2022.03.07 09:31:09 INFO  time: compiled project-3 in 0.63s
+2022.03.07 09:31:24 INFO  compiling project-3 (4 scala sources)
+2022.03.07 09:31:27 INFO  time: compiled project-3 in 2.83s
+2022.03.07 20:58:36 INFO  shutting down Metals
+2022.03.07 20:58:36 INFO  Shut down connection with build server.
+2022.03.07 20:58:36 INFO  Shut down connection with build server.
