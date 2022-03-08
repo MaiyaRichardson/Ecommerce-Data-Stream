@@ -16,6 +16,15 @@ import java.util.Properties
 import org.apache.kafka.clients.producer._
 
 
+import java.util
+import org.apache.kafka.clients.consumer.KafkaConsumer
+import java.util.Properties
+import scala.collection.JavaConverters._
+import java.io.{BufferedWriter, FileWriter}
+import scala.collection.JavaConversions._
+import scala.collection.mutable.ListBuffer
+
+
 
 object EcommerceProj {
 
@@ -25,7 +34,7 @@ object EcommerceProj {
             return emp1
     }
 
-    def countMet(): Any = {
+    /*def countMet(): Any = {
             var randCount = 1    
             while(true){
                     // order_id()
@@ -40,15 +49,18 @@ object EcommerceProj {
                 randCount += 1
             }
         }
+    */
     def main(args:Array[String]): Unit = {
-        writeToKafka("Quick-start")
-        val spark = SparkSession
+        writeToKafka("mytopic")
+
+        /*val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
+        */
         /*val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
         val df = rdd.toDF("Customer_Name", "age")
         df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
@@ -81,29 +93,14 @@ object EcommerceProj {
     def writeToKafka(topic: String): Unit = {
                 
         val props = new Properties()
-        props.put("bootstrap.servers", "localhost:9094")
+        props.put("topic", "mytopic")
+        props.put("bootstrap.servers", "localhost:9092")
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        val producer = new KafkaProducer[Any, String](props)
-        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
-                
-                
-                /*var randCount = 1    
-                    while(true){
-                            // order_id()
-                        if (randCount % 20 == 0) {
-                            producer.send(record)
-                        }
-                        else {
-                            producer.send(record)
-                        }        
-                        Thread.sleep(500)
-                        randCount += 1
-                        }
-                
-                */
-                
-            
+        val producer = new KafkaProducer[String, String](props)
+        val record = new ProducerRecord[String, String](topic, empt1(), randomGenerator())
+
+        
         producer.send(record)
         producer.close()
     }
