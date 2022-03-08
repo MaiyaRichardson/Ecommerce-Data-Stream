@@ -5099,3 +5099,20 @@ WARNING: Unmatched cancel notification for request id 524
 2022.03.07 20:58:36 INFO  shutting down Metals
 2022.03.07 20:58:36 INFO  Shut down connection with build server.
 2022.03.07 20:58:36 INFO  Shut down connection with build server.
+2022.03.08 06:55:24 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\Project-3\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.03.08 06:55:24 INFO  logging to file E:\Big-Data\Project-3\.metals\metals.log
+2022.03.08 06:55:24 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\Project-3' for client Visual Studio Code 1.65.0.
+2022.03.08 06:55:24 INFO  Parse release: 1.8.0_292
+2022.03.08 06:55:26 INFO  time: initialize in 1.92s
+2022.03.08 06:55:31 INFO  Attempting to connect to the build server...
+2022.03.08 06:55:31 INFO  skipping build import with status 'Installed'
+2022.03.08 06:55:33 INFO  no build target found for E:\Big-Data\Project-3\src\main\scala\Consumer.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.03.08 06:55:36 INFO  time: code lens generation in 4.78s
+2022.03.08 06:55:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 06:55:38 INFO  Attempting to connect to the build server...
+2022.03.08 06:55:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 06:55:38 INFO  time: Connected to build server in 7.37s
+2022.03.08 06:55:38 INFO  Connected to Build server: Bloop v1.4.12
+2022.03.08 06:55:38 INFO  time: Imported build in 0.16s
+2022.03.08 06:55:48 INFO  time: indexed workspace in 10s
+2022.03.08 13:04:17 INFO  compiling project-3 (2 scala sources)

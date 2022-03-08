@@ -60,7 +60,7 @@ object EcommerceProj {
     def writeToKafka(topic: String): Unit = {
                 
         val props = new Properties()
-        props.put("bootstrap.servers", "localhost:9094")
+        props.put("bootstrap.servers", "localhost:9092")
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         //the producer is going to receive the record. it had datatypes for the methods we are inserting
