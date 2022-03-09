@@ -14,6 +14,13 @@ import java.io.File
 import java.util.UUID.randomUUID
 import java.util.Properties
 import org.apache.kafka.clients.producer._
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.SparkConf
+import org.apache.spark.streaming.kafka.KafkaUtils
+import org.apache.spark.streaming.{Seconds, StreamingContext}
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka
+import org.apache.spark.streaming.StreamingContext._
 
 
 
@@ -32,45 +39,99 @@ object EcommerceProj {
             while(true){
                     // order_id()
                 if (randCount % 20 == 0) {
-                    println(empt1() + randomGenerator())
+                    // println(empt1() + randomGenerator())
                     
                 }
                 else {
-                    print(randomGenerator())
+                    // print(randomGenerator())
                 }        
-                Thread.sleep(2000)
+                Thread.sleep(500)
                 randCount += 1
             }
         }
     
     //this is the main method
     def main(args:Array[String]): Unit = {
-        writeToKafka("Quick-start") // this calls the writeToKafka method
+        // writeToKafka("Quick-start") // this calls the writeToKafka method
         val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
+
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
+
+
+        val rdd = spark.sparkContext.parallelize(Array((countMet,randomGenerator())))
+        val df = rdd.toDF("key", "value")
+
+
+        df.selectExpr("CAST(key AS STRING) AS key", "CAST(value AS STRING) AS value")
+            .writeStream
+            .format("kafka")
+            .option("topic", "topic")
+            .option("kafka.bootstrap.servers","localhost:9092")
+            .option("checkpointLocation", "/mnt/c/Users/gianc/Desktop/Revature")
+            // .save()
+            .start()
+            .awaitTermination()
+
+            df.printSchema()
+            // readDf.show()
+            df.show()
+
+        val linesDf = spark.readStream
+            .format("kafka")
+            .option("kafka.bootstrap.servers", "localhost:9092")
+            .option("subscribe", "topic")
+            .option("startingOffsets", "earliest")
+            .load()
+            
+            linesDf.isStreaming
+
+
+            linesDf.printSchema
+            linesDf.show
         
+
+        
+            // val csvWrite = df
+                                                                                                                    //streaming context stuff
+            // val conf = new SparkConf().setMaster("local[4]").setAppName("kafkaSparkIntegration")
+            // val ssc = new StreamingContext(conf, Seconds(2))
+
+            // //my kafka topic name is 'mytest'
+            // Logger.getLogger("org").setLevel(Level.OFF)
+            // Logger.getLogger("akka").setLevel(Level.OFF)
+
+            // println("program started")
+            // val kafkaStream = KafkaUtils.createStream(ssc, "localhost:2181","spark-streaming-consumer-group", Map("topic" -> 5) )
+            // kafkaStream.print()
+            // ssc.start
+            // ssc.awaitTermination()
+            // spark.close()
+        
+
+
+
     }
 
 
-    def writeToKafka(topic: String): Unit = {
+    // def writeToKafka(topic: String): Unit = {
                 
-        val props = new Properties()
-        props.put("bootstrap.servers", "localhost:9094")
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        //the producer is going to receive the record. it had datatypes for the methods we are inserting
-        val producer = new KafkaProducer[Any, String](props)
-        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
+    //     val props = new Properties()
+    //     props.put("bootstrap.servers", "localhost:9094")
+    //     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    //     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    //     //the producer is going to receive the record. it had datatypes for the methods we are inserting
+    //     val producer = new KafkaProducer[Any, String](props)
+    //     val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
                 
             
-        producer.send(record)
-        producer.close()
-    }
+    //     producer.send(record)
+    //     producer.close()
+    // }
 
         println(empt1)
 
