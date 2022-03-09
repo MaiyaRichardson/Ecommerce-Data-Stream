@@ -34,7 +34,7 @@ object EcommerceProj {
             return emp1
     }
 
-    /*def countMet(): Any = {
+    def countMet(): Any = {
             var randCount = 1    
             while(true){
                     // order_id()
@@ -44,40 +44,46 @@ object EcommerceProj {
                 }
                 else {
                     print(randomGenerator())
+                    
                 }        
                 Thread.sleep(2000)
                 randCount += 1
             }
         }
-    */
+    
     def main(args:Array[String]): Unit = {
-        writeToKafka("mytopic")
+        //writeToKafka("mytest")
+        //println("this is the print")
 
-        /*val spark = SparkSession
+        val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
             .master("local")
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
-        */
-        /*val rdd = spark.sparkContext.parallelize(Array(("USA", "Boston"), ("India", "Mumbai"), ("trisha", 28), ("bob", 52), ("fred", 23)))
-        val df = rdd.toDF("Customer_Name", "age")
-        df.selectExpr("CAST(Customer_Name AS String) AS key", "CAST(Customer_ID AS String) AS value")
-            .write
-            .format("kafka")
-            .option("topic", "p3ecom")
-            .option("kafka.bootstrap.servers","localhost:9092")
-            .option("checkpointLocation", "/home/gabrielklein/week11/KafkaSparkIntegration")
-            .save()
-        spark.close()
-        def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
+        
+        while(true){
+            val rdd = spark.sparkContext.parallelize(Array(("Please", randomGenerator())))
+            val df = rdd.toDF("name", "generatorOutput")
+            df.selectExpr("CAST(name AS String) AS key", "CAST(generatorOutput AS String) AS value")
+                .write
+                .format("kafka")
+                .option("topic", "mytopic")
+                .option("kafka.bootstrap.servers","localhost:9092")
+                .option("checkpointLocation", "/mnt/c/Users/user/Desktop/project3A/src")
+                .save()
+            spark.close()
+        }
+        
+        /*def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
         var name = "dsd"
         var Id = "sdsd"
+        */
         //var website
         //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
-        df.write.csv("s3://my-bucket/dummy-data/")
-        */
+        //df.write.csv("s3://my-bucket/dummy-data/")
+        
         // var randOrderId = 0
         // while(true){
         // println(randomGenerator())
@@ -90,20 +96,21 @@ object EcommerceProj {
     }
 
 
-    def writeToKafka(topic: String): Unit = {
+    /*def writeToKafka(topic: String): Unit = {
                 
         val props = new Properties()
-        props.put("topic", "mytopic")
+        props.put("topic", "mytest")
         props.put("bootstrap.servers", "localhost:9092")
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        val producer = new KafkaProducer[String, String](props)
-        val record = new ProducerRecord[String, String](topic, empt1(), randomGenerator())
+        val producer = new KafkaProducer[Any, String](props)
+        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
 
         
         producer.send(record)
         producer.close()
     }
+    */
 
         println(empt1)
 
