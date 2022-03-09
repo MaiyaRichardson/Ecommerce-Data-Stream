@@ -8065,3 +8065,277 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
+2022.03.08 17:28:42 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\Project-3\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.03.08 17:28:43 INFO  logging to file E:\Big-Data\Project-3\.metals\metals.log
+2022.03.08 17:28:43 INFO  Started: Metals version 0.11.2 in workspace 'E:\Big-Data\Project-3' for client Visual Studio Code 1.65.1.
+2022.03.08 17:28:43 INFO  Parse release: 1.8.0_292
+2022.03.08 17:28:44 INFO  time: initialize in 1.21s
+2022.03.08 17:28:44 INFO  Deleting old database format E:\Big-Data\Project-3\.metals\metals.h2.db
+2022.03.08 17:28:44 INFO  Attempting to connect to the build server...
+2022.03.08 17:28:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 17:28:48 INFO  Attempting to connect to the build server...
+2022.03.08 17:28:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 17:28:48 INFO  no build target found for E:\Big-Data\Project-3\src\main\scala\Consumer.scala. Using presentation compiler with project's scala-library version: 3.1.1
+2022.03.08 17:28:49 INFO  time: Connected to build server in 4.82s
+2022.03.08 17:28:49 INFO  Connected to Build server: Bloop v1.4.12
+2022.03.08 17:28:50 INFO  time: code lens generation in 5.98s
+2022.03.08 17:28:51 INFO  no build target found for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala. Using presentation compiler with project's scala-library version: 3.1.1
+2022.03.08 17:28:51 INFO  time: code lens generation in 1.73s
+Mar 08, 2022 5:28:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58: error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+java.util.concurrent.CompletionException: file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58: error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58: error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:946)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:988)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:996)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:407)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:251)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.acceptBalancedDelimeters(ScalaToplevelMtags.scala:274)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:172)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:50)
+	at scala.meta.internal.mtags.MtagsIndexer.index(MtagsIndexer.scala:19)
+	at scala.meta.internal.mtags.MtagsIndexer.index$(MtagsIndexer.scala:18)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.index(ScalaToplevelMtags.scala:40)
+	at scala.meta.internal.mtags.Mtags$.allToplevels(Mtags.scala:96)
+	at scala.meta.internal.metals.DefinitionProvider.fromMtags(DefinitionProvider.scala:232)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$3(DefinitionProvider.scala:193)
+	at scala.Option.orElse(Option.scala:447)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$1(DefinitionProvider.scala:193)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.DefinitionProvider.positionOccurrence(DefinitionProvider.scala:188)
+	at scala.meta.internal.metals.DocumentHighlightProvider.$anonfun$documentHighlight$1(DocumentHighlightProvider.scala:33)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at scala.meta.internal.metals.DocumentHighlightProvider.documentHighlight(DocumentHighlightProvider.scala:29)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentHighlights$1(MetalsLanguageServer.scala:1451)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+2022.03.08 17:28:52 INFO  time: code lens generation in 6.07s
+2022.03.08 17:28:59 INFO  running 'C:\Users\Work\.jabba\jdk\adopt@1.8.0-292\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\Work\AppData\Local\Temp\metals8607714301877226441\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.03.08 17:29:01 INFO  [info] welcome to sbt 1.6.1 (AdoptOpenJDK Java 1.8.0_292)
+2022.03.08 17:29:03 INFO  [info] loading settings for project project-3-build-build from metals.sbt ...
+2022.03.08 17:29:03 INFO  [info] loading project definition from E:\Big-Data\Project-3\project\project
+2022.03.08 17:29:07 INFO  [info] loading settings for project project-3-build from metals.sbt ...
+2022.03.08 17:29:07 INFO  [info] loading project definition from E:\Big-Data\Project-3\project
+2022.03.08 17:29:11 INFO  [success] Generated .bloop\project-3-build.json
+2022.03.08 17:29:11 INFO  [success] Total time: 3 s, completed Mar 8, 2022 5:29:11 PM
+2022.03.08 17:29:13 INFO  [info] loading settings for project project-3 from build.sbt ...
+2022.03.08 17:29:13 INFO  [info] set current project to KafkaSparkIntegration (in build file:/E:/Big-Data/Project-3/)
+2022.03.08 17:29:14 INFO  time: indexed workspace in 24s
+2022.03.08 17:29:16 INFO  [success] Generated .bloop\project-3.json
+2022.03.08 17:29:16 INFO  [success] Generated .bloop\project-3-test.json
+2022.03.08 17:29:16 INFO  [success] Total time: 3 s, completed Mar 8, 2022 5:29:16 PM
+2022.03.08 17:29:16 INFO  time: ran 'sbt bloopInstall' in 17s
+2022.03.08 17:29:16 INFO  Disconnecting from Bloop session...
+2022.03.08 17:29:16 INFO  Shut down connection with build server.
+2022.03.08 17:29:16 INFO  Shut down connection with build server.
+2022.03.08 17:29:16 INFO  Attempting to connect to the build server...
+2022.03.08 17:29:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 17:29:16 INFO  Attempting to connect to the build server...
+2022.03.08 17:29:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\Project-3\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.03.08 17:29:16 INFO  time: Connected to build server in 0.1s
+2022.03.08 17:29:16 INFO  Connected to Build server: Bloop v1.4.12
+2022.03.08 17:29:20 INFO  time: indexed workspace in 3.01s
+2022.03.08 17:30:02 INFO  compiling project-3 (5 scala sources)
+2022.03.08 17:30:02 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:02 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:02 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:02 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:02 INFO  time: compiled project-3 in 0.33s
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:06 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Consumer.scala
+2022.03.08 17:30:06 INFO  compiling project-3 (5 scala sources)
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:06 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:06 INFO  time: compiled project-3 in 0.26s
+2022.03.08 17:30:10 INFO  compiling project-3 (5 scala sources)
+2022.03.08 17:30:10 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:10 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:10 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:10 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:10 INFO  time: compiled project-3 in 0.16s
+2022.03.08 17:30:10 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:10 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:14 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:19 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:42 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:42 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:42 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:42 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:30:45 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:45 INFO  compiling project-3 (5 scala sources)
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:45 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:45 INFO  time: compiled project-3 in 0.18s
+2022.03.08 17:30:45 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:47 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:47 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:47 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:49 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:49 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:49 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:49 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:50 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:65:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:105:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:30:50 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:60:1: stale bloop error: Missing closing brace `}' assumed here
+=======
+^
+2022.03.08 17:30:50 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:57 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:57 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:57 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:57 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:58 WARN  Could not load snapshot text for E:\Big-Data\Project-3\src\main\scala\Ecommerce.scala
+2022.03.08 17:30:58 INFO  compiling project-3 (5 scala sources)
+2022.03.08 17:31:01 INFO  time: compiled project-3 in 2.89s
+2022.03.08 17:31:29 INFO  compiling project-3 (2 scala sources)
+2022.03.08 17:31:29 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:31:29 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:58:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:31:29 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:101:9: stale bloop error: Invalid literal number
+>>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+        ^
+2022.03.08 17:31:29 INFO  file:///E:/Big-Data/Project-3/src/main/scala/Ecommerce.scala:51:1: stale bloop error: Missing closing brace `}' assumed here
+<<<<<<< HEAD
+^
+2022.03.08 17:31:29 INFO  time: compiled project-3 in 0.21s
