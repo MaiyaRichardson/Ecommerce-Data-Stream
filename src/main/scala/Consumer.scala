@@ -1,4 +1,4 @@
-import org.apache.log4j.{Level, Logger}
+/*import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
@@ -14,13 +14,21 @@ import org.apache.kafka.clients.consumer.KafkaConsumer
 import java.util.Properties
 import scala.collection.JavaConverters._
 import org.apache.spark.sql.execution.streaming.StreamExecution
+*/
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.DataFrame
+import org.apache.spark.SparkConf
+import java.sql.DriverManager
+import java.sql.Connection
+import scala.io.Source
+import scala.collection.mutable._
 
 
 
 object Consumer {
     
     def main(args: Array[String]): Unit = {
-        consumeFromKafka("quick-start")
+        //consumeFromKafka("quick-start")
       val spark=SparkSession
         .builder
         .appName("Consumer")
@@ -41,7 +49,7 @@ object Consumer {
     
         r.writeStream
         .format("csv")
-        .option("path", "/c/Users/user/Desktop/ProjectPath")
+        .option("path", "/c/Users/user/Desktop/asdafg")
     //.option("checkPointLocation",  "/c/Users/leifr/Desktop/Kafka")
         .option("checkpointLocation",  "/c/Users/user/Desktop/Kafka")
         .start()
@@ -51,7 +59,7 @@ object Consumer {
 
     }
 
-    def consumeFromKafka(topic: String) = {
+    /*def consumeFromKafka(topic: String) = {
         val props = new Properties()
         props.put("bootstrap.servers", "localhost:9092")
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
@@ -68,7 +76,7 @@ object Consumer {
                 println(data.value())
         }
     }
-    
+    */
 
 }
 
