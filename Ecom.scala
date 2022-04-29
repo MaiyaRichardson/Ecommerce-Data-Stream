@@ -29,36 +29,17 @@ import scala.collection.mutable.ListBuffer
 
 object Ecom{
 
-    // def empt1(): String = {
-    //     var emp1 = ",,,,,,,,,,,,,,,"
-
-    //     return emp1
-    // }
-
-    /*def countMet(): Any = {
-        var randCount = 1    
-        while(true){
-            
-                println(randomGenerator())
-                
-                   
-            Thread.sleep(1000)
-            randCount += 1
-        }
-    }
-    */
+    
     var randOrderId2 = 0
     def order_id2(): BigInt = {
-        // val res2 = randomUUID().toString
+        
             randOrderId2 += 1
 
             return randOrderId2
         }
     
     def main(args:Array[String]): Unit = {
-        //writeToKafka("mytest")
-        //println("this is the print")
-        //while(true){
+        
         val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
@@ -80,44 +61,10 @@ object Ecom{
                 .save()
             
         }
-        spark.close()
-        /*def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
-        var name = "dsd"
-        var Id = "sdsd"
-        */
-        //var website
-        //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
-        //df.write.csv("s3://my-bucket/dummy-data/")
-        
-        // var randOrderId = 0
-        // while(true){
-        // println(randomGenerator())
-        // order +=1
-        // }
-        // println(randTxnSF)
-        //val csvFields1 = List(id, qty, price)        
+        spark.close()     
         
         
     }
-
-
-    /*def writeToKafka(topic: String): Unit = {
-                
-        val props = new Properties()
-        props.put("topic", "mytest")
-        props.put("bootstrap.servers", "localhost:9092")
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        val producer = new KafkaProducer[Any, String](props)
-        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
-
-        
-        producer.send(record)
-        producer.close()
-    }
-    */
-
-        //println(empt1)
 
     
 
@@ -126,41 +73,7 @@ object Ecom{
 
         var aa=0
         var randOrderId = 0
-        // randomTime()
-        // nameGenerator()
-        // countryCityGenerator()
-        // productNameCategoryGenerator()
-        // order_id()
-        // customer_id()
-        // emailg()
-        // payment_txn_id()
-        // randomProductID()
-        // while (true){
-        //     println(paymentType())
-        //     Thread.sleep(2000)
-        // }
-        // println(nameGen() + "," + countryCityGen() + "," + productNameCategoryGen() + "," + order_id() + "," + emailg() + "," + payment_txn_id()+ "," + randomProductID() )
-        //  + "," + randCountryCity + "," + randProdCatName + "," + randOrderId + "," + randCustomerId + "," + randEmail + "," + randTxnId + "," + randProdId)
 
-        /*while(true){
-            var prnt = print()
-            nameGenerator()
-            
-            Thread.sleep(2000) // wait for 2 seconds
-        }
-        //nameGenerator()
-        //countryCityGenerator()
-        //productNameCategoryGenerator()
-        */
-        
-            //println(Date)
-
-            //var exp = randomProductID()
-            // println("before ja class")
-            // println(qty,price,date.toString)
-            // println("after")
-
-            // println(qty + price + date)
         def nameGen(): String = {
             val firstNames = List("Steve", "Tony", "Peter", "Miles", "Cameron", "Kyle", "Brandon", "Summer", "Sunshine", "Autumn", "Sharyar", "Keisha", "Hardik", "Daulton", "Abubacarr", "Hardik", "Giancarlos", "Alvin", "Mai")
             val lastNames = List("Parker", "Stark", "Rodgers", "moon", "rain","wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf","sequoia", "cedar", "wrath", "blessing", "spirit", "nova", "storm", "burst","giant", "elemental", "throne", "game", "weed", "stone", "apogee", "bang")
@@ -338,9 +251,6 @@ object Ecom{
 
         def paymentType(): String = {
             var payments = List("Card", "Internet Banking", "UPI", "Wallet")
-
-            // var ran = rdm
-
             var randPayment = payments(nextInt(payments.size))
             var randNull = nextInt(30)
 
@@ -370,7 +280,6 @@ object Ecom{
         }
 
         def randomQty(): Int = {
-            // val rqty = rdm
             var qty = nextInt(50)
 
             return qty
@@ -407,21 +316,7 @@ object Ecom{
             var randData = ""
             var allData = customer_id() + "," + nameGen()  + "," + randomProductID() + "," + productNameCategoryGen() + "," + paymentType() + "," + randomQty() + "," + randomPrice() + "," + randomTime() + "," + countryCityGen() + "," +  websiteName() + "," + payment_txn_id() + "," + randTxnSF
 
-
-            // println(allData)
-            return allData
-
-
-                
-                // println(allData)
-//currently have 13
-//payment type
-
-
-
-        
-
-        
+            return allData 
 
         
     }
