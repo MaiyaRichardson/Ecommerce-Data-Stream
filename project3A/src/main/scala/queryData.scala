@@ -40,54 +40,11 @@ object queryData {
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
 
-    //This block of code is all necessary for spark/hive/hadoop
-    
-    // System.setSecurityManager(null)
-    // System.setProperty("hadoop.home.dir", "C:\\hadoop\\") // change if winutils.exe is in a different bin folder
-    // // val conf = new SparkConf()
-    // //     .setMaster("local") 
-    // //     .setAppName("Covid")    // Change to whatever app name you want
-    // //val sc = new SparkContext(conf)
-    // sc.setLogLevel("ERROR")
-    // //val hiveCtx = new HiveContext(sc)
-    // import hiveCtx.implicits._
-    // val spark = SparkSession
-    // .builder
-    // .appName("Covid")
-    // .config("spark.master", "local")
-    // .config("spark.eventLog.enabled", "false")
-    // .getOrCreate()
-
     
     spar(spark)
-    // spark.stop()
-    // insertKafkaData(hiveCtx)
-    // maxPurchase()
-    // minPurchase()
-    // orderCount()
         
     }
 
-    //def insertKafkaData(hiveCtx:HiveContext): Unit = {
-
-        // val custom_schema = StructType(Array(
-        //     StructField("order_id", StringType, true),
-        //     StructField("customer_id", StringType, true),
-        //     StructField("customer_name", StringType, true),
-        //     StructField("product_id", StringType, true),
-        //     StructField("product_name", StringType, true),
-        //     StructField("product_category", StringType, true),
-        //     StructField("payment_type", StringType, true),
-        //     StructField("qty", StringType, true),
-        //     StructField("price", StringType, true),
-        //     StructField("datetime", StringType, true),
-        //     StructField("country", StringType, true),
-        //     StructField("city", StringType, true),
-        //     StructField("ecommerce_website_name", StringType, true),
-        //     StructField("payment_txn_id", StringType, true),
-        //     StructField("payment_txn_success", StringType, true),
-        //     StructField("failure_reason", StringType, true)
-        // ))
     
     def spar(spark:SparkSession): Unit={
         val df = spark.read.csv("input/team2_data.csv").toDF("order_id","customer_id","customer_name","product_id","product_name","product_category","payment_type","qty","price","datetime","country","city","ecommerce_website_name","payment_txn_id","payment_txn_success","failure_reason")
