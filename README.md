@@ -1,4 +1,4 @@
-# Project-3
+# Ecommerce Data Stream
 Our team will be creating a data producer that will generate real time data simulating orders from an E-Commerce application
 
 # Technologies Used
