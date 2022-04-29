@@ -53,16 +53,15 @@ object EcommerceProj {
             }
         }
     
-<<<<<<< HEAD
     //this is the main method
     def main(args:Array[String]): Unit = {
         writeToKafka("Quick-start") // this calls the writeToKafka method
-=======
+
     def main(args:Array[String]): Unit = {
         //writeToKafka("mytest")
         //println("this is the print")
 
->>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
+
         val spark = SparkSession
             .builder
             .appName("KafkaSparkIntegration")
@@ -70,8 +69,6 @@ object EcommerceProj {
             .getOrCreate()
         spark.sparkContext.setLogLevel("WARN")
         import spark.implicits._
-<<<<<<< HEAD
-=======
         
         while(true){
             val rdd = spark.sparkContext.parallelize(Array(("Please", randomGenerator())))
@@ -86,48 +83,9 @@ object EcommerceProj {
             spark.close()
         }
         
-        /*def randomStringGen(length: Int) = scala.util.Random.alphanumeric.take(length).mkString
-        var name = "dsd"
-        var Id = "sdsd"
-        */
-        //var website
-        //val df = sparkContext.parallelize(Seq.fill(4000){(randomStringGen(4), randomStringGen(4), randomStringGen(6))}, 10).toDF("Order_ID", "Customer_Name", "Customer_ID")})
-        //df.write.csv("s3://my-bucket/dummy-data/")
-        
-        // var randOrderId = 0
-        // while(true){
-        // println(randomGenerator())
-        // order +=1
-        // }
-        // println(randTxnSF)
-        //val csvFields1 = List(id, qty, price)        
-        
->>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
         
     }
 
-
-    /*def writeToKafka(topic: String): Unit = {
-                
-        val props = new Properties()
-        props.put("topic", "mytest")
-        props.put("bootstrap.servers", "localhost:9092")
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        //the producer is going to receive the record. it had datatypes for the methods we are inserting
-        val producer = new KafkaProducer[Any, String](props)
-        val record = new ProducerRecord[Any, String](topic, countMet(), randomGenerator())
-<<<<<<< HEAD
-                
-            
-=======
-
-        
->>>>>>> 7855151b4bb3aea2b3ba8a33867848bb615f85f8
-        producer.send(record)
-        producer.close()
-    }
-    */
 
         println(empt1)
 
